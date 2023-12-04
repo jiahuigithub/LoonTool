@@ -1,0 +1,39 @@
+#!name=自用VIP解锁
+#!desc=VIP解锁合集
+#!author=各大佬
+#!homepage=https://github.com/jiahuigithub/LoonTool/edit/main/Scripts
+#!icon=
+#!raw-url=https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/UnlookVIP
+#!date=2023-12-02 19:35:00
+#############################################
+
+[Script]
+# NotabilityPro
+http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js, requires-body=true, timeout=10, enabled=true, tag=NotabilityPro
+
+# 幕布会员
+http-response https://api2.mubu.com/v3/api/user/current_user script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/mubu.js, requires-body=true, timeout=60, tag=幕布会员
+
+# 网易云会员
+http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+
+# Spotify Premium
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=10, tag=spotifyJson
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotifyProto
+
+# 百度网盘解锁
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://gitlab.com/isous/loonresource/-/raw/main/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body=true, timeout=10, tag=解锁SVIP权益
+
+# 百度文库解锁
+http-response ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/baidulibrary.js, requires-body=true, timeout=10, tag=百度文库解锁
+
+# B612咔叽
+http-response https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/612.js, requires-body=true, timeout=10, tag=B612咔叽
+
+# 爱企查vip
+http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js, requires-body=true, timeout=10, tag=爱企查vip
+
+
+[MITM]
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com
+
