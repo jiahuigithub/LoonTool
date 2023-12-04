@@ -1,0 +1,44 @@
+#!name=自用Cookies
+#!desc=用于获取Cookie
+#!author=各大佬
+#!homepage=https://github.com/jiahuigithub/LoonTool
+#!icon=
+#!raw-url=
+#!date=2023-12-02 19:35:00
+#############################################
+[Script]
+# 高德打车签到
+^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, tag=高德地图CK
+
+#建行生活
+http-request ^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode=(A3341A040|A3341A038) script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, requires-body=true, timeout=10, enabled=false, tag=建行生活CK
+
+#美团买菜
+http-request https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js, timeout=10, tag=美团买菜CK
+
+#霸王茶姬
+http-request ^https?:\/\/webapi\.qmai\.cn\/web\/catering\/integral\/sign\/signIn script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js, requires-body=true, timeout=10, tag=霸王茶姬CK, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
+
+#海信爱家
+http-response ^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember tag=海信爱家CK, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,requires-body=1
+
+#阿里云盘签到
+http-response https:\/\/auth.aliyundrive.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, requires-body=true, timeout=10, tag=阿里云盘签到CK
+
+#BiliBili每日等级任务
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(APP)
+
+http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(网页)
+
+
+[MITM]
+hostname=webapi.qmai.cn, *.amap.com, yunbusiness.ccb.com, sweixin.hisense.com, auth.aliyundrive.com, app.bilibili.com, m.bilibili.com
+
+
+
+
+
+
+
+
+
