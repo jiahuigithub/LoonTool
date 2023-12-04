@@ -1,0 +1,74 @@
+#!name=自用Tasks
+#!desc=日常任务合集
+#!author=各大佬
+#!homepage=https://github.com/jiahuigithub/LoonTool
+#!icon=
+#!raw-url=
+#!date=2023-12-02 19:35:00
+#############################################
+
+[Script]
+# 高德打车签到
+cron "1 8 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=10, tag=高德地图打车签到
+
+# 建行生活
+cron "17 7 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, timeout=300, enabled=false, tag=建行生活
+
+# 美团买菜
+cron "0 6,8 * * *" script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js, timeout=300, tag=美团买菜币, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/meituan/maicai.png
+
+# 霸王茶姬
+cron "5 8 * * *" script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.js, timeout=10, tag=霸王茶姬小程序签到, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
+
+# 阿里云盘签到
+cron "0 10 0 * * ?" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, timeout=300, tag=阿里云盘签到
+
+# 海信爱家
+cron "52 7 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,tag = 海信爱家,enable=true
+
+# 建行生活
+cron "17 7 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js,tag = 建行生活,enable=true
+
+# BiliBili每日等级任务
+cron "30 7 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站每日等级任务
+
+# Sakura Checkbox｜有赞小程序批量签到工具
+cron "30 8 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js, timeout=300, tag=Sakura Checkbox
+
+# 京东合集
+cron "10-20/5 12 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_live.js, timeout=300, tag=京东直播, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
+cron "21 8 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_MMdou.js, timeout=300, tag=MM领京豆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/JD_DailyBonus.js, timeout=300, tag=京东, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_kd.js, timeout=300, tag=京东快递签到, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_kd.png
+cron "2 9 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_bean_change.js, timeout=300, tag=京东资产变动通知
+cron "10 7 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_bean_home.js, timeout=300, tag=领京豆额外奖励
+cron "2 0-23/4 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_cash.js, timeout=300, tag=签到领现金
+cron "5 0,23 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_club_lottery.js, timeout=300, tag=摇京豆
+cron "13 1,22,23 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_daily_lottery.js, timeout=300, tag=每日抽奖
+cron "5 6-18/6 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_fruit.js, timeout=300, tag=东东农场
+cron "13 1,6,22 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_health.js, timeout=300, tag=东东健康社区
+cron "5 * * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_health_collect.js, timeout=300, tag=东东健康社区收集能量
+cron "1 7-21/2 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_plantBean.js, timeout=300, tag=京东种豆得豆
+cron "0 2 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_price.js, timeout=300, tag=京东保价
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_shop.js, timeout=300, tag=进店领豆
+cron "0 7 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_speed_sign.js, timeout=300, tag=京东极速版
+cron "55 23 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_unsubscribe.js, timeout=300, tag=取关京东店铺商品
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
