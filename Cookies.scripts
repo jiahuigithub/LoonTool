@@ -30,9 +30,12 @@ http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=h
 
 http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(网页)
 
+# Sakura Checkbox｜有赞小程序批量签到工具
+http-response https://h5.youzan.com/wscump/checkin/get_activity_by_yzuid_v2.json.+ script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js, timeout=300, tag=Sakura Checkbox获取token
+
 
 [MITM]
-hostname=webapi.qmai.cn, *.amap.com, mall.meituan.com, yunbusiness.ccb.com, sweixin.hisense.com, auth.aliyundrive.com, app.bilibili.com, m.bilibili.com
+hostname=webapi.qmai.cn, *.amap.com, mall.meituan.com, yunbusiness.ccb.com, sweixin.hisense.com, auth.aliyundrive.com, app.bilibili.com, m.bilibili.com, h5.youzan.com
 
 
 
