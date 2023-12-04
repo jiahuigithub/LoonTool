@@ -1,9 +1,9 @@
 #!name=自用Tasks
 #!desc=日常任务合集
 #!author=各大佬
-#!homepage=https://github.com/jiahuigithub/LoonTool
+#!homepage=https://github.com/jiahuigithub/LoonTool/edit/main/Scripts
 #!icon=
-#!raw-url=
+#!raw-url=https://github.com/jiahuigithub/LoonTool/raw/main/Scripts/Task
 #!date=2023-12-02 19:35:00
 #############################################
 
@@ -53,22 +53,4 @@ cron "0 2 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/S
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_shop.js, timeout=300, tag=进店领豆
 cron "0 7 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_speed_sign.js, timeout=300, tag=京东极速版
 cron "55 23 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_unsubscribe.js, timeout=300, tag=取关京东店铺商品
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
