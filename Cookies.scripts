@@ -32,7 +32,7 @@ http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercont
 
 
 [MITM]
-hostname=webapi.qmai.cn, *.amap.com, yunbusiness.ccb.com, sweixin.hisense.com, auth.aliyundrive.com, app.bilibili.com, m.bilibili.com
+hostname=webapi.qmai.cn, *.amap.com, mall.meituan.com, yunbusiness.ccb.com, sweixin.hisense.com, auth.aliyundrive.com, app.bilibili.com, m.bilibili.com
 
 
 
