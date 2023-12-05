@@ -22,7 +22,7 @@ http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|albu
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotifyProto
 
 # 百度网盘解锁
-http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://gitlab.com/isous/loonresource/-/raw/main/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body=true, timeout=10, tag=解锁SVIP权益
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://gitlab.com/isous/loonresource/-/raw/main/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body=true, timeout=10, tag=百度网盘解锁SVIP权益
 
 # 百度文库解锁
 http-response ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/baidulibrary.js, requires-body=true, timeout=10, tag=百度文库解锁
