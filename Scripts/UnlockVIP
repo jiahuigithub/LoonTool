@@ -33,7 +33,10 @@ http-response https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscr
 # 爱企查vip
 http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js, requires-body=true, timeout=10, tag=爱企查vip
 
+#
+http-response https://nicegram.cloud/api/v6/user/info script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nicegram.js, tag= Nicegram解锁
+
 
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, nicegram.cloud
 
