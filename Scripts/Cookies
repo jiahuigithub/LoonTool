@@ -39,8 +39,13 @@ http-request ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functi
 # 哈喽单车
 http-request ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js, timeout=10, tag=哈啰单车获取token
 
+# 滴滴打车果园
+http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_getToken.js, requires-body=true, timeout=60, tag=滴滴打车果园CK
+http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-path=https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ddgy.js, timeout=60, tag=滴滴打车果园CK2
+
+
 [MITM]
-hostname=webapi.qmai.cn, *.amap.com, mall.meituan.com, yunbusiness.ccb.com, sweixin.hisense.com, auth.aliyundrive.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com
+hostname=webapi.qmai.cn, *.amap.com, mall.meituan.com, yunbusiness.ccb.com, sweixin.hisense.com, auth.aliyundrive.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com
 
 
 
