@@ -41,7 +41,6 @@ http-request ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo script
 
 # 滴滴打车果园
 http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_getToken.js, requires-body=true, timeout=60, tag=滴滴打车果园CK
-http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-path=https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ddgy.js, timeout=60, tag=滴滴打车果园CK2
 
 
 [MITM]
