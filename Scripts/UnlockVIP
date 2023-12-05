@@ -36,7 +36,9 @@ http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-pat
 # Nicegram
 http-response ^https?:\/\/restore-access\.indream\.app\/restoreAccess script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/nicegram.js, tag= Nicegram解锁
 
+# Xmind-思维导图
+http-response ^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js, requires-body=true, tag=Xmind解锁
 
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, restore-access.indream.app
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, restore-access.indream.app, *xmind.*
 
