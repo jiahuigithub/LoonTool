@@ -16,6 +16,8 @@
 # 花小猪开屏 hostname = res.hongyibo.com.cn
 ^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity\/mget\?_t reject-dict
 
+# 人民日报去广告 hostname = app.peopleapp.com
+http-response ^https:\/\/app\.peopleapp\.com\/Api\/\d+\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/irenemsIrenes/profiles/master/Quantumult/X/js/people-news.js, requires-body=true, timeout=10, tag=人民日报去广告
 
 
 
@@ -24,4 +26,4 @@
 http-response ^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body=true, timeout=10, tag=粉笔去开屏
 
 [Mitm]
-hostname = tiku.fenbi.com, yunbusiness.ccb.com, res.hongyibo.com.cn
+hostname = tiku.fenbi.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com
