@@ -29,6 +29,9 @@ cron "3 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/mai
 # 建行生活
 cron "7 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js,tag = 建行生活,enable=true
 
+# > 云闪付
+cron "20 0 * * *" script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, tag=云闪付签到
+
 # BiliBili每日等级任务
 cron "15 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站每日等级任务
 
