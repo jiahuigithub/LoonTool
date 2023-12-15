@@ -7,45 +7,47 @@
 #!date=2023-12-02 19:35:00
 #############################################
 [Script]
-# 高德打车签到
+# 高德打车签到  *.amap.com
 http-response ^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=10, tag=高德地图, img-url=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Image/IMG_0967.jpeg
 
-#建行生活
+#建行生活  yunbusiness.ccb.com
 http-request ^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode=(A3341A040|A3341A038) script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, requires-body=true, timeout=10, enabled=true, tag=建行生活CK
 
-#美团买菜
+#美团买菜  mall.meituan.com
 http-request https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js, timeout=10, tag=美团买菜CK
 
-#霸王茶姬
+#霸王茶姬 webapi.qmai.cn
 http-request ^https?:\/\/webapi\.qmai\.cn\/web\/catering\/integral\/sign\/signIn script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js, requires-body=true, timeout=10, tag=霸王茶姬CK, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
 
-#海信爱家
+#海信爱家  sweixin.hisense.com
 http-response ^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember tag=海信爱家CK, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,requires-body=1
 
-#阿里云盘签到
+#阿里云盘签到 auth.aliyundrive.com
 http-response https:\/\/auth.aliyundrive.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, requires-body=true, timeout=10, tag=阿里云盘签到CK
 
-#BiliBili每日等级任务
-http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(APP)
+# > 云闪付 hostname = youhui.95516.com
+http-request ^https:\/\/youhui.95516.com\/newsign\/api\/sharing_power\/showUserTask script-path=ysf.js, timeout=10, tag=云闪付签到获取token
 
+#BiliBili每日等级任务 app.bilibili.com, m.bilibili.com
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(APP)
 http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(网页)
 
-# Sakura Checkbox｜有赞小程序批量签到工具
+# Sakura Checkbox｜有赞小程序批量签到工具 h5.youzan.com
 http-response https://h5.youzan.com/wscump/checkin/get_activity_by_yzuid_v2.json.+ script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js, timeout=300, tag=Sakura Checkbox获取token
 
-# 京东
+# 京东 api.m.jd.com
 http-request ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, requires-body=true, timeout=10, tag=获取京东Cookie
 
-# 哈喽单车
+# 哈喽单车 api.hellobike.com
 http-request ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js, timeout=10, tag=哈啰单车获取token
 
-# 滴滴打车果园
+# 滴滴打车果园 game.xiaojukeji.com
 http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_getToken.js, requires-body=true, timeout=60, tag=滴滴打车果园CK
 http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi.js, requires-body=true, timeout=60, tag=滴滴打车APP获取CK
 
 
 [MITM]
-hostname=webapi.qmai.cn, *.amap.com, mall.meituan.com, yunbusiness.ccb.com, sweixin.hisense.com, auth.aliyundrive.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com
+hostname = *.amap.com,  yunbusiness.ccb.com, mall.meituan.com, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com
 
 
 
