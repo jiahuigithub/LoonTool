@@ -1,0 +1,20 @@
+#!name=Scripts
+#!desc=自用Scripts
+
+[MITM]
+
+hostname = api.m.jd.com, trade-acs.m.taobao.com
+
+[Script]
+
+# 京东比价 hostname = api.m.jd.com
+http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/JD/JD_Price.js, requires-body=true, timeout=10, tag=京东比价
+# http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, timeout=60, tag=main
+
+# 淘宝比价 hostname =trade-acs.m.taobao.com
+http-request ^http://.+/amdc/mobileDispatch script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, timeout=60, tag=淘宝比价
+http-response ^http://.+/amdc/mobileDispatch script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, timeout=60, tag=淘宝比价
+http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.data\.get script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, timeout=60, tag=淘宝比价
+
+# Speed测速
+generic script-path=https://raw.githubusercontent.com/getsomecat/Qx/main/Net_Speed.js, timeout=300, tag=Speed测速, img-url=https://raw.githubusercontent.com/Yuanxsxs/QtumultX/master/Icon/Catcat/b2b4e2bf895a2c76.png
