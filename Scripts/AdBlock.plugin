@@ -16,7 +16,15 @@
 # 花小猪开屏 hostname = res.hongyibo.com.cn
 ^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity\/mget\?_t reject-dict
 
+# > 爱企查 hostname = b2baifanfan.baidu.com
+^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
 
+# > 招商银行
+# hostname = webappcfg.paas.cmbchina.com
+# 开屏广告
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig reject-200
+# 首页横幅广告
+^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
 
 [Script]
 # 粉笔去开屏 hostname = tiku.fenbi.com
@@ -28,4 +36,4 @@ http-response ^https:\/\/app\.peopleapp\.com\/Api\/\d+\/HomeApi\/getContentList 
 
 
 [Mitm]
-hostname = tiku.fenbi.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com
+hostname = tiku.fenbi.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com
