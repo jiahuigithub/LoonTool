@@ -37,7 +37,7 @@ http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-pat
 http-response ^http[s]?:\/\/purchase-tianyan-api.tianyancam.com/v1/purchase/subscription/subscriber/status script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/tianyancam.js, requires-body=true, timeout=60, tag=盐甜相机解锁
 
 # Xmind-思维导图 *xmind.*
-http-response ^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js, requires-body=true, tag=Xmind解锁
+http-response ^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js, requires-body=true, enabled=false, tag=Xmind解锁
 
 # 芒果TV hostname = *.mgtv.com
 http-request ^http[s]?:\/\/mobile\.api\.mgtv\.com\/v[0-9]\/(playlist|video\/album|video\/relative|video\/list).*$ script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/mgtv1.js, timeout=60, tag=mgtv
