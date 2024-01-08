@@ -17,18 +17,18 @@ http-response https://api2.mubu.com/v3/api/user/current_user script-path=https:/
 # 网易云会员 *.music.163.com
 # 网易云音乐 #会员解锁
 # 播放器会员皮肤
-http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/playermode\/ script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/playermode\/ script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云播放器会员皮肤
 # 搜索结果会员歌曲
-http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/search\/complex\/(page|rec\/song\/get) script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/search\/complex\/(page|rec\/song\/get) script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云搜索结果会员歌曲
 # 播放器会员歌曲
-http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/song\/(chorus|enhance\/|play\/|type\/detail\/get) script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
-http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/(v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/song\/(chorus|enhance\/|play\/|type\/detail\/get) script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云播放器会员歌曲
+http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/(v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云播放器会员歌曲
 # 侧边栏会员等级
-http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+http-request ^https:\/\/interface3?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云侧边栏会员等级
 # 首页歌单会员歌曲
-http-request ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(homepage\/|v6\/)?playlist\/ script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+http-request ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(homepage\/|v6\/)?playlist\/ script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云首页歌单会员歌曲
 # 会员认证
-http-request ^https?:\/\/interface3?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+http-request ^https?:\/\/interface3?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员认证
 
 # Spotify Premium spclient.wg.spotify.com
 http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=10, tag=spotifyJson
