@@ -16,7 +16,7 @@ http-request ^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode=(A3341
 #美团买菜  mall.meituan.com
 http-request https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js, timeout=10, tag=美团买菜CK
 
-#霸王茶姬 webapi.qmai.cn
+#霸王茶姬 qmwebapi.qmai.cn,webapi.qmai.cn
 http-request ^https?:\/\/webapi\.qmai\.cn\/web\/catering\/integral\/sign\/signIn script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js, requires-body=true, timeout=10, tag=霸王茶姬CK, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
 
 #海信爱家  sweixin.hisense.com
@@ -48,7 +48,7 @@ http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-pa
 
 
 [MITM]
-hostname = *.amap.com,  yunbusiness.ccb.com, mall.meituan.com, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com
+hostname = *.amap.com,  yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com
 
 
 
