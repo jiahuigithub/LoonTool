@@ -17,7 +17,7 @@ http-request ^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode=(A3341
 http-request https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js, timeout=10, tag=美团买菜CK
 
 #霸王茶姬 qmwebapi.qmai.cn,webapi.qmai.cn
-http-request ^https?:\/\/webapi\.qmai\.cn\/web\/catering\/integral\/sign\/signIn script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js, requires-body=true, timeout=10, tag=霸王茶姬CK, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
+http-request ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, requires-body=true, timeout=10, tag=霸王茶姬CK, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
 
 #海信爱家  sweixin.hisense.com
 http-response ^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember tag=海信爱家CK, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,requires-body=1
