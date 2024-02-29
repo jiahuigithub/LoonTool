@@ -7,7 +7,8 @@
 #!date = 2023-12-20 18:05:47
 
 [Rule]
-
+# 芒果tv
+^https?://mobile.da.mgtv.com\/m\/page reject
 
 [Rewrite]
 # 建行生活去开屏 hostname = yunbusiness.ccb.com
@@ -19,8 +20,6 @@
 # > 爱企查 hostname = b2baifanfan.baidu.com
 ^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
 
-# 芒果tv
-^https?://mobile.da.mgtv.com\/m\/page reject
 
 # > 招商银行
 # hostname = webappcfg.paas.cmbchina.com
