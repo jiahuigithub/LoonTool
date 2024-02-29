@@ -15,7 +15,9 @@ http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=ht
 http-response https://api2.mubu.com/v3/api/user/current_user script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/mubu.js, requires-body=true, timeout=60, tag=幕布会员
 
 # 网易云会员 hostname = *.music.163.com
-http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+# http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js/_end_/Wyy.js?type=qx-script&target=loon-script, timeout=60, tag=网易云会员
+http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js, timeout=60, tag=Wyy
+
 
 # Spotify Premium spclient.wg.spotify.com
 http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=10, tag=spotifyJson
