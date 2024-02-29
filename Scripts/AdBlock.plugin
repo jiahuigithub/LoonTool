@@ -19,6 +19,9 @@
 # > 爱企查 hostname = b2baifanfan.baidu.com
 ^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
 
+# 芒果tv
+^https?://mobile.da.mgtv.com\/m\/page reject
+
 # > 招商银行
 # hostname = webappcfg.paas.cmbchina.com
 # 开屏广告
