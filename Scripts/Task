@@ -21,7 +21,7 @@ cron "0 6,8 * * *" script-path=https://raw.githubusercontent.com/JoJoJotarou/myS
 cron "5 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=10, tag=霸王茶姬小程序签到, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
 
 # 阿里云盘签到
-cron "0 10 0 * * ?" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, timeout=300, tag=阿里云盘签到
+cron "0 10 0 * * ?" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=300, tag=阿里云盘签到
 
 # 海信爱家
 cron "3 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,tag = 海信爱家,enable=true
