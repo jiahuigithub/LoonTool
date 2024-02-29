@@ -59,13 +59,15 @@ http-response ^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) script-pa
 # http-response https://mobile-stream.api.mgtv.com/v1/video/source script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/mgtv.js, requires-body=true, timeout=60, tag=mgtv
 
 # > 芒果TV,Vip+会员画质+去广告,页面优化
-http-response ^https?:\/\/.*mgtv.com.*(GetUserInfo|module\/list\?_support|app\/bdboot|pullReleaseInfo|floor\/detail|video\/source|entry\?_support).*$ script-path https://raw.githubusercontent.com/WeiGiegie/666/main/mgtv.js
-http-request ^https?:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path https://raw.githubusercontent.com/WeiGiegie/666/main/mgtk.js
-
+http-response ^https?:\/\/.*mgtv.com.*(GetUserInfo|module\/list\?_support|app\/bdboot|pullReleaseInfo|floor\/detail|video\/source|entry\?_support).*$ script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/mgtv.js
+http-request ^https?:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/mgtk.js
 
 # 阿里云盘VIP hostname = *.aliyundrive.com, *.alipan.com
 http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js, requires-body=true, timeout=60, tag=阿里云盘VIP
 
+# WPS会员解锁 hostname = vas.wps.cn
+http-response ^https:\/\/vas\.wps\.cn\/query\/api\/v1\/list_purchase_info script-path=https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
+
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-tianyan-api.tianyancam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-tianyan-api.tianyancam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn
 
