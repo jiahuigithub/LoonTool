@@ -32,6 +32,12 @@ cron "7 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/mai
 # > 云闪付
 cron "20 0 * * *" script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, tag=云闪付签到
 
+# 美团红包签到
+cron "0 0 12 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, timeout=300, tag=美团签到, img-url=https://qxnav.com/rules/QuantumultX/img/meituan.png
+
+# 蜜雪冰城签到
+cron "22 8 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=60, tag=蜜雪冰城小程序
+
 # BiliBili每日等级任务
 cron "15 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站每日等级任务
 
