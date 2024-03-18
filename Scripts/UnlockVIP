@@ -45,6 +45,9 @@ http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|a
 # WPS会员解锁 hostname = vas.wps.cn
 http-response ^https:\/\/vas\.wps\.cn\/query\/api\/v1\/list_purchase_info script-path=https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
 
+# Pillow睡眠周期跟踪器+解锁订阅 hostname = api.revenuecat.com
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Pillow.js
+
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-tianyan-api.tianyancam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-tianyan-api.tianyancam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.revenuecat.com
 
