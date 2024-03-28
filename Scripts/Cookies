@@ -53,7 +53,7 @@ http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=ht
 http-request ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=10, tag=蜜雪冰城获取token
 
 # 微信支付有优惠 hostname = payapp.weixin.qq.com
-http-response https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login tag=微付金币², script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,requires-body=1
+http-response https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login tag=微付金币, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,requires-body=1
 
 [MITM]
 hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com
