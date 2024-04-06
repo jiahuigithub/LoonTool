@@ -47,7 +47,7 @@ http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-pa
 # http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi.js, requires-body=true, timeout=60, tag=滴滴打车APP获取CK
 
 # 美团红包签到 i.meituan.com
-http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js, timeout=10, tag=美团获取CK
+http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js, timeout=10, requires-body=true, tag=美团获取CK
 
 # 蜜雪冰城签到 mxsa.mxbc.net
 http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60, tag=蜜雪冰城获取token
