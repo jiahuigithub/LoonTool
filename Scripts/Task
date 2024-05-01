@@ -35,6 +35,9 @@ cron "0 13 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 # 蜜雪冰城签到
 cron "14 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=60, tag=蜜雪冰城小程序
 
+# 奈雪
+cron "15 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, timeout=60, tag=奈雪点单小程序
+
 # BiliBili每日等级任务
 cron "15 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站每日等级任务
 
