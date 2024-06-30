@@ -58,6 +58,8 @@ cron "30 9 * * 0" script-path=https://raw.githubusercontent.com/FoKit/Scripts/ma
 
 # 万达智慧商业
 cron "30 9 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,tag=万达智慧商业,enable=true
+# 泡泡玛特
+cron "0 6 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js, tag=泡泡玛特, img-url=https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/ppmt.png, enabled=true
 
 # 京东合集
 cron "10-20/5 12 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_live.js, timeout=300, tag=京东直播, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
