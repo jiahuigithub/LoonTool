@@ -90,7 +90,7 @@ http-response ^https:\/\/mpb\.jingjiu\.com\/proxy-he\/api\/user script-path=http
 http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/member\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/SDL/SDL.js, requires-body=true, timeout=20, tag=三得利_获取token
 
 # 哈根达斯 hostname = hgds-crm.myaiwecom.com
-http-request ^https:\/\/hgds-crm\.myaiwecom\.com\/api\/wxapp\/member\/getMemberDetail script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, requires-body=true, timeout=20, tag=哈根达斯_获取token
+http-response ^https:\/\/hgds-crm\.myaiwecom\.com\/api\/wxapp\/member\/getMemberDetail script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, requires-body=true, timeout=20, tag=哈根达斯_获取token
 
 
 [MITM]
