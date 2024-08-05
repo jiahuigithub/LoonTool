@@ -92,6 +92,9 @@ cron "10 10,16 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Sur
 # 大潮
 cron "30 30,35,40 9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DaChao/DaChao.js, timeout=3600, tag=大潮
 
+# 哈根达斯
+cron "43 1,21 * * *" script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, timeout=3600, tag=哈根达斯
+
 
 # 京东合集
 cron "10-20/5 12 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_live.js, timeout=300, tag=京东直播, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
