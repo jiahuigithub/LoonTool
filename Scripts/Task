@@ -90,7 +90,16 @@ cron "10,30 9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surg
 cron "10 10,16 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/RongPanAn/RongPanAn.js, timeout=3600, tag=融磐安
 
 # 大潮
-cron "30 30,35,40 9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DaChao/DaChao.js, timeout=3600, tag=大潮
+cron "30 30,35,40 9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DaChao/DaChao.js, timeout=3600, enable=false, tag=大潮
+
+# 今日越城
+cron "0 9,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YueCheng/YueCheng.js, timeout=3600, enable=false, tag=今日越城
+
+# 望潮
+cron "20 9,15,21 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WangChao/WangChao.js, timeout=3600, enable=false, tag=望潮
+
+# 掌上武义
+cron "0 7,8,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZSWY/ZSWY.js, timeout=3600, enable=false, tag=掌上武义
 
 # 哈根达斯
 cron "43 1,21 * * *" script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, timeout=3600, tag=哈根达斯
