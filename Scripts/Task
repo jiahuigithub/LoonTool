@@ -101,6 +101,9 @@ cron "20 9,15,21 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/S
 # 掌上武义
 cron "0 7,8,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZSWY/ZSWY.js, timeout=3600, enable=false, tag=掌上武义
 
+# 爱路桥
+cron "1,10 8,16 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/AiLuQiao/AiLuQiao.js, timeout=3600, enable=false, tag=爱路桥
+
 # 哈根达斯
 cron "43 1,21 * * *" script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, timeout=3600, tag=哈根达斯
 
