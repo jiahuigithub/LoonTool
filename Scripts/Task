@@ -113,6 +113,9 @@ cron "43 1,21 * * *" script-path=https://raw.githubusercontent.com/jiahuigithub/
 # 福田e家
 cron "39 11,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/FTEJ/FTEJ.js, timeout=3600, tag=福田e家
 
+# 七彩虹商城
+cron "7 8,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, timeout=3600, tag=七彩虹商城
+
 
 # 京东合集
 cron "10-20/5 12 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_live.js, timeout=300, tag=京东直播, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
