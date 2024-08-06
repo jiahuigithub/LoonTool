@@ -119,6 +119,9 @@ cron "7 8,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge
 # 泰康在线
 cron "8 8,22 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TKZX/TKZX.js, timeout=3600, tag=泰康在线
 
+## 网易严选
+cron "45 0,11,21 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WYYX/WYYX.js, timeout=3600, tag=网易严选
+cron "50 9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WYYX/WYYX_MONITOR.js, timeout=3600, tag=网易严选-兑换时间
 
 # 京东合集
 cron "10-20/5 12 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_live.js, timeout=300, tag=京东直播, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
