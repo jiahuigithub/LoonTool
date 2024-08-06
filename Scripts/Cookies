@@ -98,9 +98,12 @@ http-request ^https:\/\/shopapi\.skycolorful\.com\/api\/User\/DecryptPhoneNumber
 # 泰康在线 hostname = m.tk.cn
 http-response ^https:\/\/m\.tk\.cn\/wechat_item\/rest\/xcx\/login script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TKZX/TKZX.js, requires-body=true, timeout=20, tag=泰康在线_获取token
 
+# 网易严选 hostname = act.you.163.com
+http-request ^https:\/\/act\.you\.163\.com\/act-attendance\/task\/list script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WYYX/WYYX.js, requires-body=true, timeout=20, tag=网易严选_获取cookie
+
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn, act.you.163.com
 
 
 
