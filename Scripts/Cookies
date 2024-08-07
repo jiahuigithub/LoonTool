@@ -107,12 +107,32 @@ http-response ^https:\/\/ys\.shajixueyuan\.com\/api\/user\/info script-path=http
 # 仰韶会员 hostname = hy.51pt.top
 http-response ^https:\/\/hy\.51pt\.top\/app\/ys\/mine\/getMemberInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YSHY/YSHY.js, requires-body=true, timeout=20, tag=仰韶会员_获取token
 
-# 云筑工匠
+# 云筑工匠 hostname = lwapp.yzw.cn
 http-response ^https:\/\/lwapp\.yzw\.cn\/api\/Home\/GetWorkerInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YZGJ/YZGJ.js, requires-body=true, timeout=20, tag=云筑工匠_获取cookie
+
+# 习酒 hostname = xcx.exijiu.com
+http-response ^https:\/\/xcx\.exijiu\.com\/anti-channeling\/public\/index.php\/api\/v2\/Member\/getJifenShopMemberInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/XiJiu/XiJiu.js, requires-body=true, timeout=20, tag=习酒_获取token
+
+# 统一 hostname = xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com
+http-response ^https:\/\/xapi\.weimob\.com\/api3\/onecrm\/user\/center\/usercenter\/queryUserInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TongYi/TongYi.js, requires-body=true, timeout=20, tag=统一_获取token
+
+# 红牛会员俱乐部 hostname = xiaodian.miyatech.com
+http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/login\/wx-jc script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/RedBull/RedBull.js, requires-body=true, timeout=20, tag=红牛会员俱乐部_获取token
+
+# 麦斯威尔福利社 hostname = jde.mtbcpt.com
+http-response ^https:\/\/jde\.mtbcpt\.com\/api\/JDEMaxwellApi\/QueryHomeInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/MSWEFLS/MSWEFLS.js, requires-body=true, timeout=20, tag=麦斯威尔福利社_获取token
+
+# 健达福利社 hostname = mole.ferrero.com.cn
+http-response ^https:\/\/mole\.ferrero\.com\.cn\/boss\/boss\/scrm\/home\/info\/get script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JDFLS/JDFLS.js, requires-body=true, timeout=20, tag=健达福利社_获取token
+
+# 广汽丰田 hostname = gw.nevapp.gtmc.com.cn
+http-response ^https:\/\/gw\.nevapp\.gtmc\.com\.cn\/ha\/iam\/api\/sec\/oauth\/token script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, requires-body=true, timeout=20, tag=广汽丰田_获取token
+
+
 
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn
 
 
 
