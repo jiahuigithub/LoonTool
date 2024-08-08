@@ -9,7 +9,7 @@
 
 [Script]
 # 高德打车签到
-cron "2 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=10, tag=高德地图打车签到
+cron "2 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=300, tag=高德地图打车签到
 
 # 建行生活
 cron "7 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, timeout=300, enabled=true, tag=建行生活
@@ -18,7 +18,7 @@ cron "7 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/mai
 cron "0 6-10/2 * * *" script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js, timeout=300, tag=美团买菜币, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/meituan/maicai.png
 
 # 霸王茶姬
-cron "5 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=10, tag=霸王茶姬小程序签到, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
+cron "5 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=30, tag=霸王茶姬小程序签到, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png
 
 # 阿里云盘签到
 cron "0 10 0 * * ?" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=300, tag=阿里云盘签到
@@ -26,7 +26,7 @@ cron "0 10 0 * * ?" script-path=https://gist.githubusercontent.com/Sliverkiss/33
 # 海信爱家
 cron "3 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,tag = 海信爱家,enable=true
 
-# > 云闪付
+# 云闪付
 cron "20 0 * * *" script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, tag=云闪付签到
 
 # 美团红包签到
@@ -63,10 +63,10 @@ cron "30 9 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resourc
 cron "0 6 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js, tag=泡泡玛特, img-url=https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/ppmt.png, enabled=true
 
 # 顺丰速运
-cron "2 2 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js, timeout=10, tag=顺丰签到
+cron "2 2 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js, timeout=300, tag=顺丰签到
 
 # 奶茶多合一
-cron "5 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, timeout=10, tag=奶茶多合一
+cron "5 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, timeout=60, tag=奶茶多合一
 
 # 伊利-摇一摇
 cron "5 0,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, tag=伊利-摇一摇
