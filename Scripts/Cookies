@@ -137,9 +137,25 @@ http-response ^https:\/\/www\.js96296\.com\/dzyyt\/ppc\/dzyyt\/wchat\/marketingA
 # 攀升科技+ hostname = psjia.ipason.com
 http-response ^https:\/\/psjia\.ipason\.com\/api\/v2\/member\/memberinfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/PSKJ/PSKJ.js, requires-body=true, timeout=20, tag=攀升科技+_获取token
 
+# 富士instax玩拍由我俱乐部 hostname = instax.app.xcxd.net.cn
+http-response ^https:\/\/instax\.app\.xcxd\.net\.cn\/api\/me script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/INSTAX/INSTAX.js, requires-body=true, timeout=20, tag=富士instax玩拍由我俱乐部_获取token
+
+# 古井贡酒 hostname = scrm.gujing.com
+http-response ^https:\/\/scrm\.gujing\.com\/gujing_scrm\/wxclient\/member\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GuJing/GuJing.js, requires-body=true, timeout=20, tag=古井贡酒_获取token
+
+# 日清食品体验馆 hostname = prod-api.nissinfoodium.com.cn
+http-response ^https:\/\/prod-api\.nissinfoodium\.com\.cn\/gw-shop\/app\/v1\/user\/detail script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/RQSP/RQSP.js, requires-body=true, timeout=20, tag=日清食品体验馆_获取token
+
+# 富连e充 hostname = api.nblinks.cn
+http-response ^https:\/\/api\.nblinks\.cn\/coreApi\/user\/consumer\/v1\/(aliPayAppLogin|weChatAppLogin) script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YongXin/YongXin.js, requires-body=true, timeout=20, tag=富连e充_获取token
+
+# 尊享金陵 hostname = app.jinlinghotels.com
+http-response ^https:\/\/app\.jinlinghotels\.com\/app\/wx\/v1\/getAuthUser script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, requires-body=true, timeout=20, tag=尊享金陵_获取token
+
+
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, www.kugua.com, www.js96296.com, psjia.ipason.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, www.kugua.com, www.js96296.com, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com
 
 
 
