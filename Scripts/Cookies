@@ -134,10 +134,12 @@ http-response ^https:\/\/www\.kugua\.com\/wxapp\/openidLogin script-path=https:/
 # 江苏有线-巴黎奥运会 hostname = www.js96296.com
 http-response ^https:\/\/www\.js96296\.com\/dzyyt\/ppc\/dzyyt\/wchat\/marketingActivity\/checkProIsLogin script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JSYX/JSYX.js, requires-body=true, timeout=20, tag=江苏有线-巴黎奥运会_获取token
 
+# 攀升科技+ hostname = psjia.ipason.com
+http-response ^https:\/\/psjia\.ipason\.com\/api\/v2\/member\/memberinfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/PSKJ/PSKJ.js, requires-body=true, timeout=20, tag=攀升科技+_获取token
 
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, www.kugua.com, www.js96296.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, www.kugua.com, www.js96296.com, psjia.ipason.com
 
 
 
