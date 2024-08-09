@@ -183,6 +183,10 @@ cron "10 0,23 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surg
 # 尊享金陵
 cron "18 8,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, timeout=3600, enable=false, tag=尊享金陵
 
+# 爱海盐
+
+cron "1 10,16 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/AiHaiYan/AiHaiYan.js, timeout=3600, enable=false, tag=爱海盐
+
 
 # 京东合集
 cron "10-20/5 12 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_live.js, timeout=300, tag=京东直播, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
