@@ -92,8 +92,10 @@ http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/member\/info script
 # 哈根达斯 hostname = hgds-crm.myaiwecom.com
 http-response ^https:\/\/hgds-crm\.myaiwecom\.com\/api\/wxapp\/member\/getMemberDetail script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, requires-body=true, timeout=20, tag=哈根达斯_获取token
 
-# 七彩虹商城 hostname = shopapi.skycolorful.com
+# 七彩虹商城 hostname = shopapi.skycolorful.com, shopapitest.skycolorful.com
 http-request ^https:\/\/shopapi\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, timeout=20, tag=七彩虹商城_获取token
+http-request ^https:\/\/shopapitest\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, timeout=20, tag=七彩虹商城_获取token2
+
 
 # 泰康在线 hostname = m.tk.cn
 http-response ^https:\/\/m\.tk\.cn\/wechat_item\/rest\/xcx\/login script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TKZX/TKZX.js, requires-body=true, timeout=20, tag=泰康在线_获取token
@@ -126,10 +128,10 @@ http-response ^https:\/\/mole\.ferrero\.com\.cn\/boss\/boss\/scrm\/home\/info\/g
 http-response ^https:\/\/gw\.nevapp\.gtmc\.com\.cn\/ha\/iam\/api\/sec\/oauth\/token script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, requires-body=true, timeout=20, tag=广汽丰田_获取token
 
 # 酷瓜好物 hostname = www.kugua.com
-http-response ^https:\/\/www\.kugua\.com\/wxapp\/openidLogin script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/KuGua/KuGua.js, requires-body=true, timeout=20, tag=酷瓜好物_获取token
+# http-response ^https:\/\/www\.kugua\.com\/wxapp\/openidLogin script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/KuGua/KuGua.js, requires-body=true, timeout=20, tag=酷瓜好物_获取token
 
 # 江苏有线-巴黎奥运会 hostname = www.js96296.com
-http-response ^https:\/\/www\.js96296\.com\/dzyyt\/ppc\/dzyyt\/wchat\/marketingActivity\/checkProIsLogin script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JSYX/JSYX.js, requires-body=true, timeout=20, tag=江苏有线-巴黎奥运会_获取token
+#　http-response ^https:\/\/www\.js96296\.com\/dzyyt\/ppc\/dzyyt\/wchat\/marketingActivity\/checkProIsLogin script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JSYX/JSYX.js, requires-body=true, timeout=20, tag=江苏有线-巴黎奥运会_获取token
 
 # 攀升科技+ hostname = psjia.ipason.com
 http-response ^https:\/\/psjia\.ipason\.com\/api\/v2\/member\/memberinfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/PSKJ/PSKJ.js, requires-body=true, timeout=20, tag=攀升科技+_获取token
@@ -154,7 +156,7 @@ http-response ^https:\/\/ys\.shajixueyuan\.com\/api\/user\/info script-path=http
 
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, www.kugua.com, www.js96296.com, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, qmwebapi.qmai.cn, webapi.qmai.cn, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, www.jindd.shop, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, www.kugua.com, www.js96296.com, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com
 
 
 
