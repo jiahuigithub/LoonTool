@@ -30,7 +30,7 @@
 ^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
 
 # 盐甜相机
-^http:\/\/api-ad\.kajicam\.com\/ad\/pop\/rule\/v2  reject
+^http:\/\/api-ad\.kajicam\.com\/ad\/pop\/rule\/v2 reject
 
 
 [Script]
