@@ -33,8 +33,9 @@ http-response https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscr
 # 爱企查vip aiqicha.baidu.com
 http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js, requires-body=true, timeout=10, tag=爱企查vip
 
-# 盐甜相机VIP hostname = purchase-tianyan-api.tianyancam.com
-http-response ^http[s]?:\/\/purchase-tianyan-api.tianyancam.com/v1/purchase/subscription/subscriber/status script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/tianyancam.js, requires-body=true, timeout=60, tag=盐甜相机解锁
+# 盐甜相机VIP hostname = purchase-qingtu-api.b612kaji.com,api-qingtu.kajicam.com,purchase-tianyan-api.tianyancam.com,api-ad.kajicam.com 
+# http-response ^http[s]?:\/\/purchase-tianyan-api.tianyancam.com/v1/purchase/subscription/subscriber/status script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/tianyancam.js, requires-body=true, timeout=60, tag=盐甜相机解锁
+http-response ^https?:\/\/purchase-tianyan-api.tianyancam.com\/v1\/purchase\/subscription\/subscriber\/status script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/tyxj.js, requires-body=true, timeout=60, tag=盐甜相机解锁
 
 # Xmind-思维导图 *xmind.*
 http-response ^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js, requires-body=true, enabled=false, tag=Xmind解锁
@@ -52,5 +53,5 @@ http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCA
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrowForeverVipCrack.js, requires-body=true, timeout=60, tag=GrowForeverVipCrack
 
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-tianyan-api.tianyancam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.revenuecat.com, api.revenuecat.com
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.revenuecat.com, api.revenuecat.com
 
