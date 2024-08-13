@@ -7,10 +7,12 @@
 #!date = 2023-12-20 18:05:47
 
 [Rule]
+
+
+[Rewrite]
 # 芒果tv
 ^https?://mobile.da.mgtv.com\/m\/page reject
 
-[Rewrite]
 # 建行生活去开屏 hostname = yunbusiness.ccb.com
 ^https:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A009 reject-dict
 
@@ -21,8 +23,7 @@
 ^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
 
 
-# 招商银行
-# hostname = webappcfg.paas.cmbchina.com
+# 招商银行 hostname = webappcfg.paas.cmbchina.com
 # 开屏广告
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig reject-200
 # 首页横幅广告
