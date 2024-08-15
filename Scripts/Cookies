@@ -140,7 +140,7 @@ http-response ^https:\/\/api\.nblinks\.cn\/coreApi\/user\/consumer\/v1\/(aliPayA
 http-response ^https:\/\/app\.jinlinghotels\.com\/app\/wx\/v1\/getAuthUser script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, requires-body=true, timeout=20, tag=尊享金陵_获取token
 
 # 东方棘市 hostname = ys.shajixueyuan.com
-http-response ^https:\/\/ys\.shajixueyuan\.com\/api\/user\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DFJS/DFJS.js, requires-body=true, timeout=20, tag=东方棘市_获取token
+http-response ^https:\/\/ys\.shajixueyuan\.com\/api\/user\/info script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/DFJS.js, requires-body=true, timeout=20, tag=东方棘市_获取token
 
 
 [MITM]
