@@ -22,7 +22,6 @@
 # 爱企查 hostname = b2baifanfan.baidu.com
 ^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
 
-
 # 招商银行 hostname = webappcfg.paas.cmbchina.com
 # 开屏广告
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig reject-200
@@ -32,6 +31,8 @@
 # 盐甜相机
 ^http:\/\/api-ad\.kajicam\.com\/ad\/pop\/rule\/v2 reject
 
+# 大众点评去开屏
+^https?:\/\/img\.meituan\.net\/dpmobile\/ mock-response-body data-type=json data="{}"
 
 [Script]
 # 粉笔去开屏 hostname = tiku.fenbi.com
