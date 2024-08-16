@@ -177,6 +177,9 @@ cron "1 10,16 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surg
 # in嘉善
 cron "31 9,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JiaShan/JiaShan.js, timeout=3600, enable=false, tag=in嘉善
 
+# 青椒
+cron "1 8,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/QingJiao/QingJiao.js, timeout=3600, enable=false, tag=青椒
+
 #　读嘉
 cron "31 10,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DuJia/DuJia.js, timeout=3600, enable=false, tag=读嘉
 
