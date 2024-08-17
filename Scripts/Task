@@ -186,6 +186,9 @@ cron "31 10,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Sur
 # 竟舟
 cron "1 6,12 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingZhou/JingZhou.js, timeout=3600, enable=false, tag=竟舟
 
+# 慈晓
+cron "1 8 7,13 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/CiXiao/CiXiao.js, timeout=3600, enable=true, tag=慈晓
+
 
 # 京东合集
 cron "10-20/5 12 * * *" script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_live.js, timeout=300, tag=京东直播, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
