@@ -142,9 +142,12 @@ http-response ^https:\/\/app\.jinlinghotels\.com\/app\/wx\/v1\/getAuthUser scrip
 # 东方棘市 hostname = ys.shajixueyuan.com
 http-response ^https:\/\/ys\.shajixueyuan\.com\/api\/user\/info script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/DFJS.js, requires-body=true, timeout=20, tag=东方棘市_获取token
 
+# 顾家家居 hostname = mc.kukahome.com
+http-request ^https:\/\/mc\.kukahome\.com\/club-server\/member\/automaticLogin script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GJJJ/GJJJ.js, requires-body=true, timeout=20, tag=顾家家居_获取token
+
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, mcs-mimp-web.sf-express.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, wx-camp-wzry.mscampapi.digitalyili.com, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, hgds-crm.myaiwecom.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com
 
 
 
