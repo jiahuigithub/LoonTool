@@ -62,6 +62,12 @@ cron "2 2 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1c
 # 奶茶多合一
 cron "5 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, timeout=60, tag=奶茶多合一
 
+# 海底捞
+cron "11 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/354e7994f9ee5cc9cc353b6aba320052/raw/hdl.js, tag=海底捞签到, img-url=https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/hdl.png
+
+# 微信小程序 希望云社区 积分兑换实物
+cron "0 20 * * *" script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/xwy.js, timeout=300, tag=希望云社区
+
 # 伊利-摇一摇
 cron "5 0,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, tag=伊利-摇一摇
 
