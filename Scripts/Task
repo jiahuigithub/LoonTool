@@ -69,7 +69,7 @@ cron "11 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/354e
 # cron "0 20 * * *" script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/xwy.js, timeout=300, tag=希望云社区
 
 # 伊利-摇一摇
-cron "5 0,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, tag=伊利-摇一摇
+# cron "5 0,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, tag=伊利-摇一摇
 
 # 海天美味馆
 cron "43 2,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/HaiTian/HaiTian.js, timeout=3600, tag=海天美味馆
