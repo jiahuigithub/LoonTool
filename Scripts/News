@@ -1,0 +1,61 @@
+[Script]
+# 西施眼
+cron "6 8,14,20 * * *",script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/XiShiYan/XiShiYan.js, timeout=3600, enable=false, tag=西施眼
+
+# 望潮
+cron "20 9,15,21 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WangChao/WangChao.js, timeout=3600, enable=false, tag=望潮
+
+# 新江北
+cron "10 1,12 * * *",script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/XinJiangBei/XinJiangBei.js, timeout=3600, enable=false, tag=新江北
+
+# 潇洒桐庐
+cron "32 10,11,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TongLu/TongLu.js, timeout=3600, tag=潇洒桐庐
+
+# 掌上武义
+cron "0 7,8,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZSWY/ZSWY.js, timeout=3600, enable=false, tag=掌上武义
+
+# 青岛新闻
+cron "30 10,18 * * *",script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/QingDaoNews/QingDaoNews.js, timeout=3600, enable=false, tag=青岛新闻
+
+# 丰信客户端
+# cron "28 9,21 * * *",script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/FengXin/FengXin.js, timeout=3600, enable=false, tag=丰信客户端
+
+# 甬派
+cron "8 8,14,22 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YongPai/YongPai.js, timeout=3600, tag=甬派
+
+# 今日越城
+cron "0 9,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YueCheng/YueCheng.js, timeout=3600, enable=false, tag=今日越城
+
+# 大潮
+cron "30 30,35,40 9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DaChao/DaChao.js, timeout=3600, enable=false, tag=大潮
+
+# 爱路桥
+cron "1,10 8,16 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/AiLuQiao/AiLuQiao.js, timeout=3600, enable=false, tag=爱路桥
+
+# 掌上金东
+cron "10,30 9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZSJD/ZSJD.js, timeout=3600, tag=掌上金东
+
+# 融磐安
+cron "10 10,16 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/RongPanAn/RongPanAn.js, timeout=3600, tag=融磐安
+
+# 兰精灵
+cron "15 9,15 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/LanJingLing/LanJingLing.js, timeout=3600, tag=兰精灵
+
+# 爱海盐
+cron "1 10,16 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/AiHaiYan/AiHaiYan.js, timeout=3600, enable=false, tag=爱海盐
+
+# in嘉善
+cron "31 9,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JiaShan/JiaShan.js, timeout=3600, enable=false, tag=in嘉善
+
+# 青椒
+cron "1 8,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/QingJiao/QingJiao.js, timeout=3600, enable=false, tag=青椒
+
+# 读嘉
+cron "31 10,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DuJia/DuJia.js, timeout=3600, enable=false, tag=读嘉
+
+# 竟舟
+cron "1 6,12 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingZhou/JingZhou.js, timeout=3600, enable=false, tag=竟舟
+
+# 慈晓
+cron "1 8 7,13 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/CiXiao/CiXiao.js, timeout=3600, enable=true, tag=慈晓
+
