@@ -57,7 +57,7 @@ cron "30 9 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resourc
 cron "0 6 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js, tag=泡泡玛特, img-url=https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/ppmt.png, enabled=true
 
 # 顺丰速运
-cron "2 2 * * *" script-path=sfsy.js, timeout=3600, tag=顺丰签到
+cron "2 2 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js, timeout=3600, tag=顺丰签到
 
 # 奶茶多合一
 cron "5 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, timeout=60, tag=奶茶多合一
