@@ -115,14 +115,12 @@
             "name": "BoxJS指定Key同步到青龙",
             "script": "https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/boxjs_env_to_ql.js"
           }
-        ],
-        "descs_html": []
+        ]
       },
       {
         "id": "JD_Cookies",
         "name": "京东账号",
         "keys": ["CookiesJD"],
-        "descs_html": [],
         "settings": [
           {
             "id": "CookiesJD",
