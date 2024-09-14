@@ -30,7 +30,7 @@ function getUsername(ck) {
 
 async function getScriptUrl() {
   const response = await $.http.get({
-    url: "https://raw.githubusercontent.com/dompling/Script/master/jd/ql_api.js",
+    url: "https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/ql_api.js",
   });
   return response.body;
 }
