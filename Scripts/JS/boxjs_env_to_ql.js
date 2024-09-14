@@ -40,7 +40,7 @@ $.getdata = (t) => {
 
 const title = "🐉 通知提示";
 const notifyMsg = [];
-let envsSync = $.read("ENV_KEY") || `[]`;
+let envsSync = $.read("#ENV_KEY") || `[]`;
 
 try {
     envsSync = JSON.parse(envsSync);
