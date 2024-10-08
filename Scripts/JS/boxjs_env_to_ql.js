@@ -61,7 +61,7 @@ envsSync.forEach((item) => {
     notifyMsg.push(`${item.BoxJsKey}->${item.qlKey}`);
 
     envsData[item.BoxJsKey] = {
-        name: item,
+        name: item.qlKey,
         value: qlValue,
         remarks: item.remark || `BoxJS 上传 Key${item.BoxJsKey}`,
     };
