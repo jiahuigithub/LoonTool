@@ -175,6 +175,8 @@ http-request ^https://webapi.qmai.cn/web/catering/crm/points-info$ script-path=g
 # 星妈优选 hostname = www.feihevip.com 
 http-request ^https://www.feihevip.com/api/starMember/getMemberServe$ script-path=getcookies.js, timeout=60, enabled=true, tag=星妈优选获取cookie
 
+# 飞蚂蚁旧衣回收 hostname = openapp.fmy90.com
+http-request ^https://openapp.fmy90.com/home/news/status script-path=getcookies.js, timeout=60, enabled=true, tag=飞蚂蚁旧衣回收获取cookie
 
 
 [MITM]
