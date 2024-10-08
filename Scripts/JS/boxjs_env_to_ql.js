@@ -56,11 +56,11 @@ try {
 
 const envsData = {};
 envsSync.forEach((item) => {
-    const qlValue = $.getdata(item) || "";
+    const qlValue = $.getdata(item.BoxJsKey) || "";
     if (!qlValue) return $.error("环境变量值不能为空");
     notifyMsg.push(`${item.BoxJsKey}->${item.qlKey}`);
 
-    envsData[item] = {
+    envsData[item.BoxJsKey] = {
         name: item,
         value: qlValue,
         remarks: item.remark || `BoxJS 上传 Key${item.BoxJsKey}`,
