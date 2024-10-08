@@ -104,7 +104,7 @@ http-request ^https:\/\/act\.you\.163\.com\/act-attendance\/task\/list script-pa
 http-response ^https:\/\/hy\.51pt\.top\/app\/ys\/mine\/getMemberInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YSHY/YSHY.js, requires-body=true, timeout=20, tag=仰韶会员_获取token
 
 # 云筑工匠 hostname = lwapp.yzw.cn
-http-response ^https:\/\/lwapp\.yzw\.cn\/api\/Home\/GetWorkerInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YZGJ/YZGJ.js, requires-body=true, timeout=20, tag=云筑工匠_获取cookie
+# http-response ^https:\/\/lwapp\.yzw\.cn\/api\/Home\/GetWorkerInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YZGJ/YZGJ.js, requires-body=true, timeout=20, tag=云筑工匠_获取cookie
 
 # 习酒 hostname = xcx.exijiu.com
 http-response ^https:\/\/xcx\.exijiu\.com\/anti-channeling\/public\/index.php\/api\/v2\/Member\/getJifenShopMemberInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/XiJiu/XiJiu.js, requires-body=true, timeout=20, tag=习酒_获取token
@@ -168,7 +168,7 @@ http-response ^https://member-pro\.zhengjiamax\.com/member/checkMemberSession sc
 
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, xwyapi.newhope.cn, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, lwapp.yzw.cn, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com, ecustomer.cntaiping.com, msmarket.msx.digitalyili.com, gw2c-hw-open.longfor.com, ttdprod-mp.4008618618.com, crm.nestlechinese.com, member-pro.zhengjiamax.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, xwyapi.newhope.cn, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com, ecustomer.cntaiping.com, msmarket.msx.digitalyili.com, gw2c-hw-open.longfor.com, ttdprod-mp.4008618618.com, crm.nestlechinese.com, member-pro.zhengjiamax.com
 
 
 
