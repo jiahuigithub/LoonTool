@@ -167,6 +167,11 @@
                 "id": "nickname",
                 "name": "昵称",
                 "type": "text"
+              },
+              {
+                "id": "remark",
+                "name": "备注",
+                "type": "text"
               }
             ]
           }
