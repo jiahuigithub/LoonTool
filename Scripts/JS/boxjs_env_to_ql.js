@@ -1,6 +1,6 @@
 /*
 青龙 docker 每日自动同步 boxjs cookie
-4 0 * * * https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/jd/boxjs_env_to_ql.js
+4 0 * * * https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/boxjs_env_to_ql.js
  */
 
 const $ = new API("ql", true);

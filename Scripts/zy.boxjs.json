@@ -141,6 +141,41 @@
         ],
         "author": "@zy",
         "repo": "https://github.com/jiahuigithub/LoonTool/tree/main"
+      },
+      {
+        "id": "JD_Cookies_remark",
+        "name": "登录助手",
+        "keys": ["@jd_ck_remark.remark"],
+        "settings": [
+          {
+            "id": "@jd_ck_remark.remark",
+            "name": "CK 备注列表",
+            "val": "",
+            "type": "textarea",
+            "autoGrow": false,
+            "rows": 8,
+            "desc": "CK 备注列表 (JSON 格式)",
+            "primary": ["nickname", "status"],
+            "child": [
+              {
+                "id": "username",
+                "name": "用户 pin",
+                "disabled": true,
+                "type": "text"
+              },
+              {
+                "id": "nickname",
+                "name": "昵称",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "icons": [
+          "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+          "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+        ],
+        "author": "@zy"
       }
     ]
   }

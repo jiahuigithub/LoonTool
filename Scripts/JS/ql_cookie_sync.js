@@ -9,9 +9,7 @@ const title = "🐉 通知提示";
 
 const jd_cookies = JSON.parse($.read("#CookiesJD") || "[]");
 
-let remark = [
-  {"username":"jd_6839c08a4125a","nickname":"mi"},{"username":"jd_40aaa6601ed72","nickname":"159"}
-];
+let remark = {};
 try {
   const _remark = JSON.parse(
     JSON.parse($.read("#jd_ck_remark") || "{}").remark || "[]"
