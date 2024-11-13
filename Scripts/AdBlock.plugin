@@ -190,11 +190,11 @@ URL-REGEX, '^http:\/\/\w{32}\.jddebug\.com\/diagnose\?', REJECT
 http-response ^https:\/\/app\.peopleapp\.com\/Api\/\d+\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/irenemsIrenes/profiles/master/Quantumult/X/js/people-news.js, requires-body=true, timeout=10, tag=人民日报去广告
 
 # 京东 //api.m.jd.com
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/jingdong.js, requires-body = true, tag = jingdong
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/jingdong.js, requires-body = true, tag = 京东去广告
 
 # 中国移动云盘 //ad.mcloud.139.com, jzts.cmpassport.com
-http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/cloud139.js, requires-body = true, tag = cloud139_1
-http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/cloud139.js, requires-body = true, tag = cloud139_2
+http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/cloud139.js, requires-body = true, tag = 移动云盘去广告
+http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/cloud139.js, requires-body = true, tag = 移动云盘去广告
 
 
 
