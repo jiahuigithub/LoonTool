@@ -139,7 +139,7 @@ DOMAIN, ads.95516.com, REJECT
 DOMAIN, switch.cup.com.cn, REJECT
 
 # ======= REGEX ======= #
-URL-REGEX, '^http:\/\/\w{32}\.jddebug\.com\/diagnose\?', REJECT
+URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 
 [Rewrite]
 # 盒马
