@@ -89,10 +89,11 @@ http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/member\/info script
 # 哈根达斯 hostname = hgds-crm.myaiwecom.com
 # http-response ^https:\/\/hgds-crm\.myaiwecom\.com\/api\/wxapp\/member\/getMemberDetail script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, requires-body=true, timeout=20, tag=哈根达斯_获取token
 
-# 七彩虹商城 hostname = shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com
+# 七彩虹商城 hostname = shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, shop.skycolorful.com
 http-request ^https:\/\/shopapi\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token
 http-request ^https:\/\/shopapitest\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token2
 http-request ^https:\/\/shop\.skycolorful\.com:45677\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token3
+http-request ^https:\/\/shop\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token4
 
 # 泰康在线 hostname = m.tk.cn
 http-response ^https:\/\/m\.tk\.cn\/wechat_item\/rest\/xcx\/login script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TKZX/TKZX.js, requires-body=true, timeout=20, tag=泰康在线_获取token
@@ -185,7 +186,7 @@ http-request ^https:\/\/moapi\.wps\.cn\/app\/ios\/v1\/app$ script-path=wps.js, r
 http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=sfsy.js, requires-body=true, timeout=60, enabled=true, tag=顺丰速运获取token
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, xwyapi.newhope.cn, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com, ecustomer.cntaiping.com, msmarket.msx.digitalyili.com, gw2c-hw-open.longfor.com, ttdprod-mp.4008618618.com, crm.nestlechinese.com, member-pro.zhengjiamax.com, www.feihevip.com, openapp.fmy90.com, moapi.wps.cn, mcs-mimp-web.sf-express.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, xwyapi.newhope.cn, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, shop.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com, ecustomer.cntaiping.com, msmarket.msx.digitalyili.com, gw2c-hw-open.longfor.com, ttdprod-mp.4008618618.com, crm.nestlechinese.com, member-pro.zhengjiamax.com, www.feihevip.com, openapp.fmy90.com, moapi.wps.cn, mcs-mimp-web.sf-express.com
 
 
 
