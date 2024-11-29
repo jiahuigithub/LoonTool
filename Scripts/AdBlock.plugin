@@ -61,7 +61,7 @@ DOMAIN, pageviewp.icbc.com.cn, REJECT
 
 # ======= H ======= #
 # 盒马
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Hema4iPhone*)), REJECT
+AND, ((URL-REGEX, "^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch"), (USER-AGENT, "Hema4iPhone*")), REJECT
 
 # ======= J ======= #
 # 建设银行
@@ -139,7 +139,7 @@ DOMAIN, ads.95516.com, REJECT
 DOMAIN, switch.cup.com.cn, REJECT
 
 # ======= REGEX ======= #
-URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
+URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 
 
 
