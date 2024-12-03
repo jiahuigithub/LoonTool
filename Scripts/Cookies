@@ -186,7 +186,7 @@ http-request ^https:\/\/moapi\.wps\.cn\/app\/ios\/v1\/app$ script-path=wps.js, r
 http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=sfsy.js, requires-body=true, timeout=60, enabled=true, tag=顺丰速运获取token
 
 # 顾家家居 hostname = mc.kukahome.com
-http-request https:\/\/mc.kukahome.com\/club-server\/front\/member\/personalCenter script-path=sfsy.js, requires-body=false, timeout=60, enabled=true, tag=顾家家居获取token
+http-request https:\/\/mc.kukahome.com\/club-server\/front\/member\/personalCenter script-path=getcookies.js, requires-body=false, timeout=60, enabled=true, tag=顾家家居获取token
 
 
 [MITM]
