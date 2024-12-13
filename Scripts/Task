@@ -21,10 +21,10 @@ cron "3 6,8,11 * * *" script-path=https://raw.githubusercontent.com/JoJoJotarou/
 cron "0 10 0 * * ?" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=300, tag=阿里云盘签到
 
 # 海信爱家
-cron "3 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,tag = 海信爱家,enable=true
+# cron "3 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,tag = 海信爱家,enable=true
 
 # 云闪付
-cron "20 0 * * *" script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, tag=云闪付签到
+cron "20 0 * * *" script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, tag=云闪付签到,enable=true
 
 # 美团红包签到
 cron "0 13 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, timeout=300, tag=美团签到, img-url=https://qxnav.com/rules/QuantumultX/img/meituan.png
@@ -45,10 +45,10 @@ cron "31 0,8 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/58
 cron "21 0 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js, timeout=300, tag=哈啰单车奖励金签到, enabled=false, img-url=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Hldc.png
 
 # 滴滴果园
-cron "10 0,8,12,18 * * *" script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, timeout=300, enabled=false, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png
+# cron "10 0,8,12,18 * * *" script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, timeout=300, enabled=false, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png
 
 # 微信支付有优惠
-cron "30 9 * * 0" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,tag = 微付金币,enable=true
+# cron "30 9 * * 0" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,tag = 微付金币,enable=true
 
 # 万达智慧商业
 cron "30 5 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,tag=万达智慧商业,enable=true
@@ -157,7 +157,7 @@ cron "10 0,23 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surg
 cron "18 8,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, timeout=3600, enable=false, tag=尊享金陵
 
 # 东方棘市
-cron "43 11,21 * * *" script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/backup/DFJS.js, timeout=3600, enable=false, tag=东方棘市
+# cron "43 11,21 * * *" script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/backup/DFJS.js, timeout=3600, enable=false, tag=东方棘市
 
 # 顾家家居
 # cron "19 9,17 * * *",script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GJJJ/GJJJ.js, timeout=3600, enable=false, tag=顾家家居
