@@ -152,11 +152,11 @@ http-response ^https:\/\/ys\.shajixueyuan\.com\/api\/user\/info script-path=http
 # 太平通 hostname = ecustomer.cntaiping.com
 http-response ^https:\/\/ecustomer\.cntaiping\.com\/tpayms\/app\/tpay\/account\/getAcct script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/BackUp/TaiPingTong/TaiPingTong.js, requires-body=true, tag=太平通_获取token
 
-# 伊利-国庆 hostname = msmarket.msx.digitalyili.com
-#　http-response ^https:\/\/msmarket\.msx\.digitalyili\.com\/gateway\/api\/auth\/account\/user\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, requires-body=true, tag=伊利-国庆_获取token
+# 伊利-春节 hostname = msmarket.msx.digitalyili.com
+http-response ^https:\/\/msmarket\.msx\.digitalyili\.com\/gateway\/api\/auth\/account\/user\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, requires-body=true, tag=伊利-国庆_获取token
 
 # 龙湖天街获取 hostname = gw2c-hw-open.longfor.com
-http-request ^https?:\/\/gw2c\-hw\-open\.longfor\.com\/lmarketing\-task\-api\-mvc\-prod\/openapi\/task\/v1\/signature\/clock script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/lhtj/lhtj.js, requires-body=true, timeout=60, tag=龙湖天街获取Cookie
+http-request ^https:\/\/msmarket\.msx\.digitalyili\.com\/gateway\/api\/auth\/account\/user\/info script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/lhtj/lhtj.js, requires-body=true, timeout=60, tag=龙湖天街获取Cookie
 
 # 卫岗天天订签到 hostname = ttdprod-mp.4008618618.com
 http-request ^https:\/\/ttdprod-mp\.4008618618\.com\/mallbusiness\/ums\/common\/getMemberInfo script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/wgttd.js, tag=卫岗天天订Cookie
@@ -190,7 +190,7 @@ http-request https:\/\/mc.kukahome.com\/club-server\/front\/member\/personalCent
 
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, xwyapi.newhope.cn, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, shop.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com, ecustomer.cntaiping.com, gw2c-hw-open.longfor.com, ttdprod-mp.4008618618.com, crm.nestlechinese.com, member-pro.zhengjiamax.com, www.feihevip.com, openapp.fmy90.com, moapi.wps.cn, mcs-mimp-web.sf-express.com, mc.kukahome.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, game.xiaojukeji.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, xwyapi.newhope.cn, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, shop.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com, ecustomer.cntaiping.com, msmarket.msx.digitalyili.com, gw2c-hw-open.longfor.com, ttdprod-mp.4008618618.com, crm.nestlechinese.com, member-pro.zhengjiamax.com, www.feihevip.com, openapp.fmy90.com, moapi.wps.cn, mcs-mimp-web.sf-express.com, mc.kukahome.com
 
 
 
