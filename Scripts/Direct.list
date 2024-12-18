@@ -1,6 +1,3 @@
 # 规则修正
 # 爱奇艺影视时长任务
 DOMAIN-SUFFIX,msg.qy.net
-
-# ipv6检测
-DOMAIN-SUFFIX,checkipv6.dyndns.com
