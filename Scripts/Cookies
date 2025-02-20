@@ -191,6 +191,9 @@ http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\
 # 顾家家居 hostname = mc.kukahome.com
 http-request https:\/\/mc.kukahome.com\/club-server\/front\/member\/personalCenter script-path=getcookies.js, requires-body=false, timeout=60, enabled=true, tag=顾家家居获取token
 
+# 叮咚买菜 hostname = maicai.api.ddxq.mobi
+http-request ^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DingDong/DingDong.js, tag=叮咚买菜_获取cookie
+
 
 [MITM]
 hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, xwyapi.newhope.cn, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, shop.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com, ecustomer.cntaiping.com, msmarket.msx.digitalyili.com, gw2c-hw-open.longfor.com, ttdprod-mp.4008618618.com, crm.nestlechinese.com, member-pro.zhengjiamax.com, erp.5jingcai.com, www.feihevip.com, openapp.fmy90.com, moapi.wps.cn, mcs-mimp-web.sf-express.com, mc.kukahome.com
