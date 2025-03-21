@@ -9,7 +9,7 @@
 
 [Script]
 # NotabilityPro notability.com
-http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js, requires-body=true, timeout=10, enabled=true, tag=NotabilityPro
+http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/Not.js, requires-body=true, timeout=10, enabled=true, tag=NotabilityPro
 
 # 幕布会员 api2.mubu.com
 http-response https://api2.mubu.com/v3/api/user/current_user script-path=https://raw.githubusercontent.com/afengye/QX/main/mubu.js, requires-body=true, timeout=60, tag=幕布会员

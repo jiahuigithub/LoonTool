@@ -8,27 +8,7 @@
 
 [Rule]
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
-# > 广告联盟
-DOMAIN-SUFFIX, miaozhen.com, REJECT
-DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
-DOMAIN-KEYWORD, -tos.pstatp.com, REJECT
-DOMAIN-KEYWORD, asiad.byteactivity, REJECT
-DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
-DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
-DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
-DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
-DOMAIN-SUFFIX, getui.com, REJECT
-DOMAIN-SUFFIX, getui.net, REJECT
-DOMAIN-SUFFIX, gepush.com, REJECT
-DOMAIN-SUFFIX, igexin.com, REJECT
-DOMAIN-SUFFIX, log.aliyuncs.com, REJECT
-DOMAIN-SUFFIX, zlsdk.1rtb.net, REJECT
-# > 收集用户隐私联盟，若有问题自行设置白名单
-DOMAIN-KEYWORD, volc, REJECT
-DOMAIN-KEYWORD, umeng, REJECT
 
-# > 其他
-DOMAIN, api.liquidlink.cn, REJECT
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
@@ -281,9 +261,6 @@ DOMAIN, lc.map.baidu.com, REJECT
 
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
-# > 叮嗒出行
-DOMAIN-KEYWORD,image.bianxianmao.com, REJECT
-
 # > 滴滴青桔（支付界面图片有误杀）
 #DOMAIN-KEYWORD, pt-starimg.didistatic.com, REJECT
 IP-CIDR, 203.107.1.1/24, no-resolve, REJECT
@@ -331,22 +308,6 @@ DOMAIN-SUFFIX,afd.l.google.com, REJECT
 DOMAIN-SUFFIX,www.googleadservices.com, REJECT
 DOMAIN-SUFFIX,www.google-analytics.com, REJECT
 DOMAIN, ads.youtube.com, REJECT
-
-# > 高德
-DOMAIN-SUFFIX,adiu.amap.com, REJECT
-DOMAIN, aboard.apilocate.amap.com, REJECT
-DOMAIN, apiinit.amap.com, REJECT
-DOMAIN, icloud-amap.com, REJECT
-DOMAIN, logs.amap.com, REJECT
-DOMAIN-SUFFIX,dualstack-logs.amap.com, REJECT
-DOMAIN-SUFFIX,logs.amap.com, REJECT
-DOMAIN-SUFFIX,optimus-ads.amap.com, REJECT
-DOMAIN-SUFFIX,page.amap.com, REJECT
-DOMAIN, optimus-ads.amap.com, REJECT
-DOMAIN, optimus-ads.amap.com.w.alikunlun.com, REJECT
-DOMAIN-SUFFIX,shouji.sougou.com, REJECT
-DOMAIN, u51.me, REJECT
-DOMAIN-SUFFIX,u51.me, REJECT
 
 # > 工商银行
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT
@@ -462,8 +423,6 @@ DOMAIN, sec.umeng.com, REJECT
 DOMAIN, ulogs.umeng.com, REJECT
 DOMAIN, ynuf.aliapp.org, REJECT
 
-# 数字联盟
-DOMAIN-SUFFIX, shuzilm.cn, REJECT
 
 # Speedtest
 DOMAIN-KEYWORD, -adsystem.com, REJECT
@@ -824,6 +783,22 @@ DOMAIN-KEYWORD, in-page-push
 # hostname = app.10099.com.cn
 ^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage reject-200
 
+# > 菜鸟裹裹
+# hostname = cn-acs.m.cainiao.com, amdc.m.taobao.com
+# 首页 好物推荐,商品推广,底部标签页,快递详情页,问卷调查,主页图标
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|index)\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbopen\.miniapp\.recommend\.cpc\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn reject-dict
+# 发现页 数字角标 裹裹券
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cncreditmarket\.hit\.getactivityhit\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.longquan\.place\.getpageresourcecontent\.cn reject-dict
+# 支付宝-菜鸟
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads reject
+
 [Script]
 # 粉笔去开屏 // tiku.fenbi.com
 # http-response ^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body=true, timeout=10, tag=粉笔去开屏
@@ -841,5 +816,4 @@ http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent scr
 
 
 [Mitm]
-hostname = acs.m.taobao.com, acs-m.freshippo.com, gw.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, p0.meituan.net, p1.meituan.net, mp.weixin.qq.com, wallet.95516.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, api.m.jd.com, ad.mcloud.139.com, jzts.cmpassport.com ,app.10099.com.cn
-
+hostname = acs.m.taobao.com, acs-m.freshippo.com, gw.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, p0.meituan.net, p1.meituan.net, mp.weixin.qq.com, wallet.95516.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, api.m.jd.com, ad.mcloud.139.com, jzts.cmpassport.com, app.10099.com.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com
