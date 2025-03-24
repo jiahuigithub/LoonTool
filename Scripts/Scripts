@@ -9,9 +9,8 @@ hostname = api.m.jd.com, in.m.jd.com
 
 # 京东比价 hostname = api.m.jd.com
 http-response ^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path = https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body = true, timeout=60, tag = 京东比价
-# 京东比价(弹窗通知版) 适用于京东App版本V15.0.8 hostname = in.m.jd.com
-http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, timeout=60, tag=京东比价弹窗通知版
-
+# 京东比价 适用于京东App版本V15.0.8 hostname = in.m.jd.com
+http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body=true, timeout=10, tag=京东比价
 
 # 淘宝比价 hostname =trade-acs.m.taobao.com
 # http-request ^http://.+/amdc/mobileDispatch script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, requires-body=true, timeout=60, tag=淘宝比价
