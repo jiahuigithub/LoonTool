@@ -3,7 +3,7 @@
 
 [MITM]
 
-hostname = api.m.jd.com, in.m.jd.com
+hostname =in.m.jd.com
 
 [Script]
 # 京东比价 hostname = in.m.jd.com 原始，表格，折线不能同时开启, 点击商品详情页触发脚本
