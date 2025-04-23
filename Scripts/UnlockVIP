@@ -52,6 +52,9 @@ http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCA
 # Unlock Permanent VIP hostname = api.revenuecat.com
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrowForeverVipCrack.js, requires-body=true, timeout=60, tag=GrowForeverVipCrack
 
+# 天天跳绳——解锁VIP hostname = api.tiantiantiaosheng.com
+http-response ^https:\/\/api\.tiantiantiaosheng\.com\/api2\/s_plus_member\/info script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/TTTS.js, requires-body=true, timeout=60, tag=TTTS
+
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.revenuecat.com, api.revenuecat.com
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.revenuecat.com, api.revenuecat.com, api.tiantiantiaosheng.com
 
