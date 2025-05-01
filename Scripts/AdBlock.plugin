@@ -692,7 +692,7 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 # 大众点评去开屏 
 ^https?:\/\/img\.meituan\.net\/dpmobile\/ mock-response-body data-type=json data="{}"
 
-# 叮叮充电
+# 叮叮充电 hostname = api.dingdingzn.com
 ^https://api.dingdingzn.com/uapp/promotion/ad/list mock-response-body data-type=json status-code=200
 
 # ======= E ======= #
@@ -819,4 +819,4 @@ http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent scr
 
 
 [Mitm]
-hostname = acs.m.taobao.com, acs-m.freshippo.com, gw.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, p0.meituan.net, p1.meituan.net, mp.weixin.qq.com, wallet.95516.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, api.m.jd.com, ad.mcloud.139.com, jzts.cmpassport.com, app.10099.com.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com
+hostname = acs.m.taobao.com, acs-m.freshippo.com, gw.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, p0.meituan.net, p1.meituan.net, mp.weixin.qq.com, wallet.95516.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, api.m.jd.com, ad.mcloud.139.com, jzts.cmpassport.com, app.10099.com.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
