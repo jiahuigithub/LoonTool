@@ -336,8 +336,9 @@ DOMAIN-KEYWORD,keplerapi.jd.com, REJECT
 DOMAIN-KEYWORD,mapi.m.jd.com, REJECT
 # 屏蔽DNS
 DOMAIN, dns.jd.com, REJECT
-IP-CIDR, 101.124.19.122/32, no-resolve, REJECT
-IP-CIDR6,2402:db40:5100:1011::5/128, no-resolve, REJECT
+URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
+IP-CIDR,101.124.19.122/32,REJECT,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
 
@@ -721,6 +722,11 @@ DOMAIN-KEYWORD, in-page-push
 
 # > 建行生活去开屏 // yunbusiness.ccb.com
 ^https:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A009 reject-dict
+
+
+# > 京东 // api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) reject-dict
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig response-body-json-replace data.JDMessage.socketmonitor.isSocketEstablishedAhead 0 data.JDMessage.socketmonitor.isSocketReport 0 data.JDHttpToolKit.httpdns.httpdns 0
 
 # ======= K ======= #
 
