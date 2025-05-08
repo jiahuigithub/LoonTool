@@ -366,8 +366,6 @@ DOMAIN-SUFFIX,d.meituan.net, REJECT
 DOMAIN, adui.tg.meitu.com, REJECT
 DOMAIN, aaid.uyunad.com, REJECT
 
-# > 买单吧
-DOMAIN-KEYWORD,c-hzgt2.getui.com, REJECT
 
 
 # > 墨迹天气
@@ -703,9 +701,14 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 # ======= G ======= #
 
 # ======= H ======= #
-# 盒马 // acs.m.taobao.com, acs-m.freshippo.com, gw.alicdn.com
-^https:\/\/acs-m\.freshippo\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/ reject-dict
-^https:\/\/gw\.alicdn\.com\/i4\/.+?-hemafrontend\.gif\? reject
+# > 盒马
+# hostname = acs.m.taobao.com, acs-m.freshippo.com
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.hippotown\.tabbar\.info reject
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene reject-dict
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage reject-200
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice reject-dict
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.crm\.platform\.ma\.recommend reject-dict
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.mimir\.recommend\.after\.purchase\.activity reject-dict
 
 # 花小猪开屏 // res.hongyibo.com.cn
 ^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity\/mget\?_t reject-dict
@@ -736,19 +739,24 @@ DOMAIN-KEYWORD, in-page-push
 # 芒果tv
 ^https?://mobile.da.mgtv.com\/m\/page reject
 
-# 美团 & 美团外卖 // flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
-^http:\/\/wmapi\.meituan\.com\/api\/v7\/(?:loadInfo|openscreen|startpicture) reject-dict
-^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg reject-dict
-^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
-^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_\d+\.json reject-dict
-^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(?:brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
-
-# 美团 // img.meituan.net,s3plus.meituan.net,flowplus.meituan.net,p0.meituan.net,p1.meituan.net
+# > 美团 & 美团外卖
+# hostname = img.meituan.net, s3plus.meituan.net, flowplus.meituan.net
+^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) reject-dict
+^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
+^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
+^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
+# 美团订单详情页更多推荐
 ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
-^https:\/\/p(0|1)\.meituan\.net\/linglong\/\w{36,38}\.gif reject
-^https:\/\/p0\.meituan\.net\/travelcube\/7b1797f1a0e9dd936ee134657470507f2067\.png($|\.webp($|[^\s]+)) reject
-^https:\/\/p0\.meituan\.net\/linglong\/7ae4f2836035e4b439e58476985592142777\.png($|\.webp($|@[^\s]+)) reject
+
+
+# > 买单吧
+# hostname = creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com
+^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg) reject
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do reject-200
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion reject-200
+
+
 
 # ======= N ======= #
 
@@ -758,7 +766,12 @@ DOMAIN-KEYWORD, in-page-push
 
 # ======= Q ======= #
 
-# ======= R ======= #
+# >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
+# > 人民日报
+# hostname = app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com
+^https?:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) reject
+^https?:\/\/stat\.peopleapp\.com\/ reject
+^https?:\/\/adstatic\.peopleapp\.com\/upload\/AppLoad\/.*.(jpg|png) reject-200
 
 # ======= S ======= #
 
@@ -773,6 +786,10 @@ DOMAIN-KEYWORD, in-page-push
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle) reject-dict
 
 # ======= X ======= #
+# > 小兔充充
+# hostname = ad.xiaotucc.com, mapi.xiaotucc.com
+# 小程序净化
+^https?:\/\/ad\.xiaotucc\.com\/advert reject
 
 # ======= Y ======= #
 # 云闪付 // wallet.95516.com
@@ -781,16 +798,43 @@ DOMAIN-KEYWORD, in-page-push
 # 盐甜相机 
 ^http:\/\/api-ad\.kajicam\.com\/ad\/pop\/rule\/v2 reject
 
-# ======= Z ======= #
-# 招商银行 // webappcfg.paas.cmbchina.com
+# >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
+# > 招商银行
+# hostname = webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com
 # 开屏广告
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig reject-200
 # 首页横幅广告
-^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
+^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
 
-# > 中国广电
-# hostname = app.10099.com.cn
-^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage reject-200
+# > 中国移动
+# hostname = client.app.coc.10086.cn, app.10086.cn
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList reject
+# 多个悬浮窗
+^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket reject
+
+# > 中国移动云盘
+# hostname = mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com
+^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/IAdvert reject-200
+^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/v\d\/getAdverts reject-200
+^https?:\/\/middle\.yun\.139\.com\/openapi\/cardConfig\/queryCardInfoV3 reject-200
+^https?:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/adv-filter\/AdInfoFilter\/getAdInfos reject-dict
+^https?:\/\/mrp\.mcloud\.139\.com\/mc\/mc-client-service\/openapi\/letter\/query reject-dict
+
+# > 中国联通
+# hostname = m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
+^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) reject-img
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm reject-dict
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) reject-img
+^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) reject-img
+^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} reject-img
+^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= reject-img
+
+# > 中国电信
+# hostname = cloud.189.cn, zt-app.go189.cn
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation reject-img
+
 
 # > 菜鸟裹裹
 # hostname = cn-acs.m.cainiao.com, amdc.m.taobao.com
@@ -809,20 +853,23 @@ DOMAIN-KEYWORD, in-page-push
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads reject
 
 [Script]
-# 粉笔去开屏 // tiku.fenbi.com
-# http-response ^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body=true, timeout=10, tag=粉笔去开屏
-
-# 人民日报去广告 // app.peopleapp.com
-http-response ^https:\/\/app\.peopleapp\.com\/Api\/\d+\/HomeApi\/getContentList script-path=https://raw.githubusercontent.com/irenemsIrenes/profiles/master/Quantumult/X/js/people-news.js, requires-body=true, timeout=10, tag=人民日报去广告
+# > 粉笔 // tiku.fenbi.com
+http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fenbi.js, requires-body=true, timeout=60, tag=粉笔开屏广告, enable=true
 
 # 京东 // api.m.jd.com
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/jingdong.js, requires-body = true, tag = 京东去广告
 
-# 中国移动云盘 //ad.mcloud.139.com, jzts.cmpassport.com
-http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/cloud139.js, requires-body = true, tag = 移动云盘去广告
-http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/cloud139.js, requires-body = true, tag = 移动云盘去广告
+# > 盒马
+http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(?>indexpage|mypage|tabfeedstream) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/freshippo.js, requires-body=true, timeout=60, tag=盒马, enable=true
 
+# >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
+# > 买单吧
+http-response ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mdb.js, requires-body=true, timeout=60, tag=买单吧, enable=true
+
+# >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
+# > 小兔充充
+http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body=true, timeout=60, tag=小兔充充, enable=true
 
 
 [Mitm]
-hostname = acs.m.taobao.com, acs-m.freshippo.com, gw.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, p0.meituan.net, p1.meituan.net, mp.weixin.qq.com, wallet.95516.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, api.m.jd.com, ad.mcloud.139.com, jzts.cmpassport.com, app.10099.com.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
+hostname = acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, mp.weixin.qq.com, ad.xiaotucc.com, mapi.xiaotucc.com, wallet.95516.com, yunbusiness.ccb.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
