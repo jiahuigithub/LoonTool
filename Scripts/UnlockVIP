@@ -46,8 +46,9 @@ http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|a
 # WPS会员解锁 hostname = vas.wps.cn
 http-response ^https:\/\/vas\.wps\.cn\/query\/api\/v1\/list_purchase_info script-path=https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js, requires-body=true, timeout=60, tag=WPSOffice
 
-# Pillow睡眠周期跟踪器+解锁订阅 hostname = api.revenuecat.com
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Pillow.js, requires-body=true, timeout=60, tag=pillow解锁
+# Pillow睡眠周期跟踪器+解锁订阅 hostname = api.rc-backup.com, revenuecat.com, api.revenuecat.com
+# http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Pillow.js, requires-body=true, timeout=60, tag=pillow解锁
+http-response ^https:\/\/(api\.rc-backup\.com|api\.revenuecat\.com)\/v1\/(receipts|subscribers) requires-body=1,script-path=https://raw.githubusercontent.com/xlzs001/cs/refs/heads/main/revcat2099.js,timeout=60,engine=auto
 
 # Unlock Permanent VIP hostname = api.revenuecat.com
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrowForeverVipCrack.js, requires-body=true, timeout=60, tag=GrowForeverVipCrack
@@ -56,5 +57,5 @@ http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCA
 http-response ^https:\/\/api\.tiantiantiaosheng\.com\/api2\/s_plus_member\/info script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/TTTS.js, requires-body=true, timeout=60, tag=TTTS
 
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.revenuecat.com, api.revenuecat.com, api.tiantiantiaosheng.com
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.rc-backup.com, revenuecat.com, api.revenuecat.com, api.revenuecat.com, api.tiantiantiaosheng.com
 
