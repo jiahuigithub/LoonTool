@@ -29,9 +29,8 @@ http-response ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token scr
 http-request ^https:\/\/youhui.95516.com\/newsign\/api\/sharing_power\/showUserTask script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, timeout=10, tag=云闪付签到获取token
 
 # BiliBili每日等级任务 app.bilibili.com, m.bilibili.com
-http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(APP)
-http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(网页)
-
+http-reponse ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(APP)
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(网页)
 # Sakura Checkbox｜有赞小程序批量签到工具 h5.youzan.com
 http-response https://h5.youzan.com/wscump/checkin/get_activity_by_yzuid_v2.json.+ script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js, timeout=300, tag=Sakura Checkbox获取token
 
