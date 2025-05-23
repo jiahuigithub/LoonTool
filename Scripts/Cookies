@@ -167,7 +167,7 @@ http-request ^https:\/\/crm.nestlechinese.com\/openapi\/pointsservice\/api\/Poin
 http-response ^https://member-pro\.zhengjiamax\.com/member/checkMemberSession script-path=https://raw.githubusercontent.com/shufflewzc/faker/main/zhengjia.js, requires-body=true, timeout=60, tag=正佳广场小程序签到Cookie
 
 # 鲸才招聘 hostname = gateway.5jingcai.com
-http-response ^https:\/\/gateway\.5jingcai\.com\/mini\/data/user/person.json script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingCai/JingCai.js, requires-body=true, timeout=60, tag=鲸才招聘_获取token
+http-response ^https:\/\/gateway\.5jingcai\.com\/mini\/data\/user\/person.json script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingCai/JingCai.js, requires-body=true, timeout=60, tag=鲸才招聘_获取token
 
 
 
