@@ -140,7 +140,7 @@ http-response ^https:\/\/prod-api\.nissinfoodium\.com\.cn\/gw-shop\/app\/v1\/use
 http-response ^https:\/\/api\.nblinks\.cn\/coreApi\/user\/consumer\/v1\/(aliPayAppLogin|weChatAppLogin) script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YongXin/YongXin.js, requires-body=true, timeout=20, tag=富连e充_获取token
 
 # 尊享金陵 hostname = app.jinlinghotels.com
-http-response ^https:\/\/app\.jinlinghotels\.com\/app\/wx\/v1\/getAuthUser script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, requires-body=true, timeout=20, tag=尊享金陵_获取token
+http-response ^https:\/\/app\.jinlinghotels\.com\/app\/member\/v1\/getMemberBasic script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, requires-body=true, timeout=20, tag=尊享金陵_获取token
 
 # 东方棘市 hostname = ys.shajixueyuan.com
 http-response ^https:\/\/ys\.shajixueyuan\.com\/api\/user\/info script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/backup/DFJS.js, requires-body=true, timeout=20, tag=东方棘市_获取token
