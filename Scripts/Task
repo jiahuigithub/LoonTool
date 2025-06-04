@@ -84,28 +84,28 @@ cron "0 5 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker/
 # cron "5 0,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, tag=伊利-摇一摇
 
 # 海天美味馆
-cron "43 2,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/HaiTian/HaiTian.js, timeout=3600, tag=海天美味馆
+cron "43 2,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/HaiTian/HaiTian.js, timeout=3600, enable=false, tag=海天美味馆
 
 # IQOO社区
-cron "25 2,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/IQOO/IQOO.js, timeout=3600, tag=IQOO社区
+cron "25 2,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/IQOO/IQOO.js, timeout=3600, enable=false, tag=IQOO社区
 
 # 毛铺草本荟
-cron "27 7,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/MPCBH/MPCBH.js, timeout=3600, tag=毛铺草本荟
+cron "27 7,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/MPCBH/MPCBH.js, timeout=3600, enable=false, tag=毛铺草本荟
 
 # 三得利
-cron "19 8,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/SDL/SDL.js, timeout=3600, tag=三得利
+cron "19 8,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/SDL/SDL.js, timeout=3600, enable=false, tag=三得利
 
 # 哈根达斯
 # cron "43 1,21 * * *" script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, timeout=3600, tag=哈根达斯
 
 # 福田e家
-cron "39 11,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/FTEJ/FTEJ.js, timeout=3600, tag=福田e家
+cron "39 11,19 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/FTEJ/FTEJ.js, timeout=3600, enable=false, tag=福田e家
 
 # 七彩虹商城
-cron "7 8,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, timeout=3600, tag=七彩虹商城
+cron "7 8,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, timeout=3600, enable=false, tag=七彩虹商城
 
 # 泰康在线
-cron "8 8,22 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TKZX/TKZX.js, timeout=3600, tag=泰康在线
+cron "8 8,22 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TKZX/TKZX.js, timeout=3600, enable=false, tag=泰康在线
 
 # 网易严选
 cron "45 0,11,21 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WYYX/WYYX.js, timeout=3600, tag=网易严选
@@ -171,10 +171,10 @@ cron "59 59 6 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surg
 # cron "11 0,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, enable=true, tag=伊利-春节
 
 # 鲸才招聘
-cron "14 7,15 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingCai/JingCai.js, timeout=3600, enable=true, tag=鲸才招聘
+cron "14 7,15 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingCai/JingCai.js, timeout=3600, enable=false, tag=鲸才招聘
 
 # 叮咚买菜
-cron "5 0,9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DingDong/DingDong.js, timeout=360, enable=false, tag=叮咚买菜签到
+cron "5 0,9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DingDong/DingDong.js, timeout=360, enable=true, tag=叮咚买菜签到
 
 # 叮叮充电
-cron "6 0,7 * * *" script-path=DingDing.js, timeout=360, enable=true, tag=叮叮充电
+cron "6 0,7 * * *" script-path=DingDing.js, timeout=360, enable=false, tag=叮叮充电
