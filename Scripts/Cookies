@@ -52,7 +52,7 @@ http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=ht
 http-response https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login tag=微付金币, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,requires-body=true
 
 # 万达智慧商业 hostname = www.wandawic.com
-http-response ^https?:\/\/www\.wandawic\.com\/api\/foreground\/loginregister\/queryUser tag=万达智慧商业,script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,requires-body=true
+http-response ^https?:\/\/www\.wandawic\.com\/api\/wic-business-application\/api\/user\/query tag=万达智慧商业,script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,requires-body=true
 
 # 奈雪点单获取token hostname = tm-web.pin-dao.cn
 http-request ^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, requires-body=true, timeout=60, tag=奈雪点单获取token
