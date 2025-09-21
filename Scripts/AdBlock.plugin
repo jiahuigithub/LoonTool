@@ -8,7 +8,13 @@
 
 [Rule]
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
-
+DOMAIN-SUFFIX,ip-ddns.com,DIRECT
+DOMAIN-KEYWORD,cloudns,节点选择
+DOMAIN-KEYWORD,us.kg,DIRECT
+DOMAIN-KEYWORD,mangshe,节点选择
+DOMAIN-KEYWORD,pttime,DIRECT
+DOMAIN-KEYWORD,pthome,DIRECT
+DOMAIN-KEYWORD,hxpt,DIRECT
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
