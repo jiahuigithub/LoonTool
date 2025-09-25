@@ -9,14 +9,24 @@
 [Rule]
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
 DOMAIN-SUFFIX,ip-ddns.com,DIRECT
-DOMAIN-KEYWORD,cloudns,节点选择
 DOMAIN-KEYWORD,us.kg,DIRECT
+
+DOMAIN-KEYWORD,cloudns,节点选择
 DOMAIN-KEYWORD,mangshe,节点选择
-DOMAIN-KEYWORD,pttime,DIRECT
-DOMAIN-KEYWORD,pthome,DIRECT
+DOMAIN-KEYWORD,getupnote,节点选择
+DOMAIN-KEYWORD,x10hosting,节点选择
+DOMAIN,zh-cn.fonedog.com,节点选择
+DOMAIN,dao.ke,节点选择
+DOMAIN,ca.virtnet.bond,节点选择
+DOMAIN-KEYWORD,freenom,手节点选择
+DOMAIN,xingjiabijichang.com,节点选择
+
 DOMAIN-KEYWORD,hxpt,DIRECT
 # > 收钱吧 扫码
 DOMAIN,ads-shopping.shouqianba.com,DIRECT
+
+
+
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
