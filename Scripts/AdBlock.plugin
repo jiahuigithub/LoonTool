@@ -21,6 +21,7 @@ DOMAIN,ca.virtnet.bond,节点选择
 DOMAIN-KEYWORD,freenom,手节点选择
 DOMAIN,xingjiabijichang.com,节点选择
 
+DOMAIN-KEYWORD,pt.gtk,节点选择
 DOMAIN-KEYWORD,hxpt,DIRECT
 # > 收钱吧 扫码
 DOMAIN,ads-shopping.shouqianba.com,DIRECT
