@@ -1,6 +1,7 @@
 # 规则修正
 # 爱奇艺影视时长任务
 DOMAIN-SUFFIX,msg.qy.net
+
 DOMAIN-KEYWORD,pttime
 DOMAIN-KEYWORD,pthome
 DOMAIN-KEYWORD,hxpt
