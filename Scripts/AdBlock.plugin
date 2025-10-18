@@ -429,6 +429,22 @@ DOMAIN, ads.cup.com.cn, REJECT
 # 小程序净化
 ^https?:\/\/ad\.xiaotucc\.com\/advert reject
 
+
+# > 晓晓优选
+# hostname = xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner reject
+# 多余模块
+# ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra reject-dict
+# 弹窗广告
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
+# 右下角的悬浮广告
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/urban\/activity\/index\/data\?agentId=12 reject
+# 禁止上报设备信息
+^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form reject
+
 # ======= Y ======= #
 # 云闪付 // wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
@@ -510,4 +526,4 @@ http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/get
 
 
 [Mitm]
-hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, wallet.95516.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
+hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, wallet.95516.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
