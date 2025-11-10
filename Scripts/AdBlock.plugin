@@ -250,6 +250,28 @@ DOMAIN, dns.weixin.qq.com.cn, REJECT
 DOMAIN, data.mistat.xiaomi.com, REJECT
 DOMAIN, tracking.intl.miui.com, REJECT
 
+# > 晓晓优选
+DOMAIN-SUFFIX, 1sapp.com, REJECT
+DOMAIN-SUFFIX, aiclk.com, REJECT
+DOMAIN-SUFFIX, adbiding.com, REJECT
+DOMAIN-SUFFIX, xwpbj.com, REJECT
+DOMAIN-SUFFIX, qttunion.com, REJECT
+DOMAIN-SUFFIX, qiyukf.com, REJECT
+DOMAIN-SUFFIX, fancyapi.com, REJECT
+DOMAIN-SUFFIX, ad.richmob.cn, REJECT
+DOMAIN-SUFFIX, api-htp.beizi.biz, REJECT
+DOMAIN-suffix, yfanads.com, reject
+DOMAIN-suffix, 1rtb.net, reject
+DOMAIN-suffix, adwangmai.com, reject
+DOMAIN-suffix, yunxinfw.com, REJECT
+DOMAIN-suffix, bridgeoos.com, REJECT
+DOMAIN-suffix, cloooud.com, REJECT
+DOMAIN-suffix, baihemob.com, REJECT
+DOMAIN-suffix, ad.bwton.com, REJECT
+DOMAIN-suffix, api.wxcjgg.cn, REJECT
+DOMAIN-suffix, shunchangzhixing.com, REJECT
+IP-CIDR, 114.132.165.205/32, REJECT
+
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # > 云闪付
 DOMAIN, ads.95516.com, REJECT
