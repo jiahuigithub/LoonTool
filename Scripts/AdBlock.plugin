@@ -326,11 +326,6 @@ DOMAIN, ads.cup.com.cn, REJECT
 # ======= B ======= #
 
 # ======= C ======= #
-# > 彩云天气
-# hostname = api.caiyunapp.com, wrapper.cyapi.cn
-^https?:\/\/api\.caiyunapp\.com\/v1\/activity reject-dict
-^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? mock-response-body data-type=json data-path="https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json" status-code=200
-
 
 # ======= D ======= #
 # 大众点评去开屏 
@@ -577,4 +572,4 @@ http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/get
 
 
 [Mitm]
-hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, wallet.95516.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, api.caiyunapp.com, wrapper.cyapi.cn, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, in.m.jd.com, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
+hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, wallet.95516.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, in.m.jd.com, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
