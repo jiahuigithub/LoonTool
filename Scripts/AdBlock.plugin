@@ -240,7 +240,7 @@ DOMAIN, wxsmsdy.video.qq.com, REJECT
 # >>>>>>>>>>>>>>> ✅ V ✅ <<<<<<<<<<<<<<
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
-# 微信
+# > 微信
 DOMAIN-SUFFIX, wxs.qq.com, REJECT
 DOMAIN, badjs.weixinbridge.com, REJECT
 DOMAIN, dns.weixin.qq.com.cn, REJECT
@@ -328,7 +328,7 @@ DOMAIN, ads.cup.com.cn, REJECT
 # ======= C ======= #
 
 # ======= D ======= #
-# 大众点评去开屏 
+# > 大众点评去开屏 
 ^https?:\/\/img\.meituan\.net\/dpmobile\/ mock-response-body data-type=json data="{}"
 
 # 叮叮充电 hostname = api.dingdingzn.com
@@ -364,7 +364,9 @@ DOMAIN, ads.cup.com.cn, REJECT
 # ======= I ======= #
 
 # ======= J ======= #
-
+# > 建设银行
+# hostname = image1.ccb.com
+^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(?:nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
 
 # > 建行生活
 # hostname = yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me
@@ -379,8 +381,14 @@ DOMAIN, ads.cup.com.cn, REJECT
 ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopcouponpopupservice\.getshopcouponspopup reject
 ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource response-body-replace-regex posterList ""
 
+# > 交通银行
+# hostname = download1.bankcomm.com
+^https?:\/\/download1\.bankcomm\.com\/chngweb\/CHNRCSP\/media reject
+^https?:\/\/download1\.bankcomm\.com\/mobs6-inner\/offline\/static\/releaseConf reject
 
-# > 京东 // api.m.jd.com
+
+# > 京东
+# hostname = api.m.jd.com
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? reject
 ^https:\/\/api\.m\.jd\.com\/\?loginType=11 reject-dict
@@ -399,7 +407,7 @@ DOMAIN, ads.cup.com.cn, REJECT
 # ======= L ======= #
 
 # ======= M ======= #
-# 芒果tv
+# > 芒果tv
 ^https?://mobile.da.mgtv.com\/m\/page reject
 
 # > 美团 & 美团外卖
@@ -451,7 +459,7 @@ DOMAIN, ads.cup.com.cn, REJECT
 # ======= V ======= #
 
 # ======= W ======= #
-# 移除微信公众号文章底栏都在搜
+# > 移除微信公众号文章底栏都在搜
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword reject-dict
 
 
@@ -489,19 +497,27 @@ DOMAIN, ads.cup.com.cn, REJECT
 ^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare reject
 
 # ======= Y ======= #
-# 云闪付 // wallet.95516.com
+# > 云闪付
+# hostname = wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
 
-# 盐甜相机 
+# > 盐甜相机 
 ^http:\/\/api-ad\.kajicam\.com\/ad\/pop\/rule\/v2 reject
+
+# > 邮储银行
+# hostname = static.psbc.com, mcc.psbc.com
+^https?:\/\/static.psbc.com:8090\/mbank_f\/images\/[0-9]+\.png - reject-200
+^https?:\/\/mcc.psbc.com:9090\/mcc\/resources\/[0-9]+\.(jpg|png) reject-200
 
 # >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
 # > 招商银行
-# hostname = webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com
+# hostname = s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com
 # 开屏广告
+^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ reject
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig reject-200
 # 首页横幅广告
 ^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
+
 
 # > 中国移动
 # hostname = client.app.coc.10086.cn, app.10086.cn
@@ -550,13 +566,11 @@ DOMAIN, ads.cup.com.cn, REJECT
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads reject
 
 [Script]
-# > 粉笔 // tiku.fenbi.com
-http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fenbi.js, requires-body=true, timeout=60, tag=粉笔开屏广告, enable=true
-
-# 京东 // api.m.jd.com
+# > 京东
+# hostname = api.m.jd.com
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js, requires-body = true, tag = [京东]移除广告
 
-# 京东极速版
+# > 京东极速版
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, argument = jdLiteAdvertisingVO -> sooyaaabo, requires-body = true, tag = [京东]移除京东极速版广告
 
 # > 盒马
@@ -572,4 +586,4 @@ http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/get
 
 
 [Mitm]
-hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, wallet.95516.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, in.m.jd.com, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
+hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, wallet.95516.com, image1.ccb.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, download1.bankcomm.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, static.psbc.com, mcc.psbc.com, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, in.m.jd.com, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com
