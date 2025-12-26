@@ -9,40 +9,40 @@
 
 [Script]
 # 高德打车签到
-cron "2 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=300, tag=高德地图打车签到
+cron "2 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=300, enabled=true, tag=高德地图打车签到
 
 # 建行生活
 cron "7 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, timeout=300, enabled=true, tag=建行生活
 
 # 美团买菜
-cron "3 6,8,11 * * *" script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js, timeout=300, tag=美团买菜币, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/meituan/maicai.png
+cron "3 6,8,11 * * *" script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js, timeout=300, enabled=true, tag=美团买菜币, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/meituan/maicai.png
 
 # 阿里云盘签到
-cron "0 10 0 * * ?" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=300, tag=阿里云盘签到
+cron "0 10 0 * * ?" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=300, enabled=true, tag=阿里云盘签到
 
 # 海信爱家
 # cron "3 0 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,tag = 海信爱家,enable=true
 
 # 云闪付
-cron "20 0 * * *" script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, tag=云闪付签到,enable=true
+cron "20 0 * * *" script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, tag=云闪付签到, enable=false
 
 # 美团红包签到
-cron "0 13 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, timeout=300, tag=美团签到, img-url=https://qxnav.com/rules/QuantumultX/img/meituan.png
+cron "0 13 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, timeout=300, enabled=true, tag=美团签到, img-url=https://qxnav.com/rules/QuantumultX/img/meituan.png
 
 # 蜜雪冰城签到
-cron "14 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=60, tag=蜜雪冰城小程序
+cron "14 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=60, enabled=true, tag=蜜雪冰城小程序
 
 # 奈雪
-cron "15 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, timeout=60, tag=奈雪点单小程序
+cron "15 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, timeout=60, enabled=true, tag=奈雪点单小程序
 
 # BiliBili每日等级任务
-cron "15 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站每日等级任务
+cron "15 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, enabled=true, tag=B站每日等级任务
 
 # Sakura Checkbox｜有赞小程序批量签到工具
-cron "31 0,8 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js, timeout=300, tag=Sakura Checkbox, enabled=false
+cron "31 0,8 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js, timeout=300, enabled=true, tag=Sakura Checkbox
 
 #哈喽单车获取奖励金
-cron "21 0 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js, timeout=300, tag=哈啰单车奖励金签到, enabled=false, img-url=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Hldc.png
+cron "21 0 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js, timeout=300, enabled=true, tag=哈啰单车奖励金签到, img-url=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Hldc.png
 
 # 滴滴果园
 # cron "10 0,8,12,18 * * *" script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, timeout=300, enabled=false, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png
@@ -51,7 +51,7 @@ cron "21 0 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4e
 # cron "30 9 * * 0" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,tag = 微付金币,enable=true
 
 # 万达智慧商业
-cron "30 5 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,tag=万达智慧商业,enable=true
+cron "30 5 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,tag=万达智慧商业,enable=false
 
 # 泡泡玛特
 cron "0 6 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js, tag=泡泡玛特, img-url=https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/ppmt.png, enabled=true
@@ -63,19 +63,19 @@ cron "0 6 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe
 cron "5 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, timeout=60, tag=奶茶多合一
 
 # 海底捞
-cron "11 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/354e7994f9ee5cc9cc353b6aba320052/raw/hdl.js, tag=海底捞签到, img-url=https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/hdl.png
+cron "11 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/354e7994f9ee5cc9cc353b6aba320052/raw/hdl.js, enabled=true, tag=海底捞签到, img-url=https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/hdl.png
 
 # 龙湖天街
-cron "2 1 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/lhtj/lhtj.js, timeout=60, tag=龙湖天街
+cron "2 1 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/lhtj/lhtj.js, timeout=60, enabled=false, tag=龙湖天街
 
 # 卫岗天天订签到
-cron "0 1 * * *" script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/wgttd.js, timeout=120, tag=卫岗天天订签到
+cron "0 1 * * *" script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/wgttd.js, timeout=120, enabled=false, tag=卫岗天天订签到
 
 # 雀巢会员俱乐部
-cron "30 0 * * *" script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/nestle.js, timeout=300, tag=雀巢会员俱乐部
+cron "30 0 * * *" script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/nestle.js, timeout=300, enabled=false, tag=雀巢会员俱乐部
 
 # 正佳广场小程序签到
-cron "0 5 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker/main/zhengjia.js, timeout=120, tag=正佳广场小程序签到
+cron "0 5 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker/main/zhengjia.js, timeout=120, enabled=false, tag=正佳广场小程序签到
 
 # 微信小程序 希望云社区 积分兑换实物
 # cron "0 20 * * *" script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/xwy.js, timeout=300, tag=希望云社区
