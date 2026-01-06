@@ -51,7 +51,7 @@ cron "21 0 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4e
 # cron "30 9 * * 0" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,tag = 微付金币,enable=true
 
 # 万达智慧商业
-cron "30 5 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,tag=万达智慧商业,enable=false
+cron "30 5 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js, tag=万达智慧商业, enable=false
 
 # 泡泡玛特
 cron "0 6 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js, tag=泡泡玛特, img-url=https://raw.githubusercontent.com/sliverkiss/QuantumultX/main/icon/ppmt.png, enabled=true
@@ -163,9 +163,9 @@ cron "18 8,17 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surg
 # cron "19 9,17 * * *",script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GJJJ/GJJJ.js, timeout=3600, enable=false, tag=顾家家居
 
 # 太平通
-cron "35 0,8 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/BackUp/TaiPingTong/TaiPingTong.js, timeout=3600, tag=太平通
-cron "39 0,8 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/BackUp/TaiPingTong/TaiPingTong_Plant.js, timeout=3600, tag=太平通_种树
-cron "59 59 6 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/BackUp/TaiPingTong/TaiPingTong_Receive.js, timeout=3600, tag=太平通_兑换
+cron "35 0,8 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/BackUp/TaiPingTong/TaiPingTong.js, timeout=3600, enable=false, tag=太平通
+cron "39 0,8 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/BackUp/TaiPingTong/TaiPingTong_Plant.js, timeout=3600, enable=false, tag=太平通_种树
+cron "59 59 6 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/BackUp/TaiPingTong/TaiPingTong_Receive.js, timeout=3600, enable=false, tag=太平通_兑换
 
 # 伊利-春节
 # cron "11 0,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, enable=true, tag=伊利-春节
@@ -174,7 +174,7 @@ cron "59 59 6 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surg
 cron "14 7,15 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingCai/JingCai.js, timeout=3600, enable=false, tag=鲸才招聘
 
 # 叮咚买菜
-cron "5 0,9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DingDong/DingDong.js, timeout=360, enable=true, tag=叮咚买菜签到
+cron "5 0,9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DingDong/DingDong.js, timeout=360, enable=false, tag=叮咚买菜签到
 
 # 叮叮充电
 cron "6 0,7 * * *" script-path=DingDing.js, timeout=360, enable=false, tag=叮叮充电
