@@ -180,4 +180,4 @@ cron "5 0,9 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/
 cron "6 0,7 * * *" script-path=DingDing.js, timeout=360, enable=false, tag=叮叮充电
 
 # 水易费
-cron "6 0,7 * * *" script-path=ShuiYiFei.js, timeout=360, enable=false, tag=水易费
+cron "7 0,7 * * *" script-path=ShuiYiFei.js, timeout=360, enable=false, tag=水易费
