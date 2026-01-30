@@ -489,7 +489,7 @@ DOMAIN, ads.cup.com.cn, REJECT
 # > 携程
 # hostname = m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com
 # 更新弹窗 APP降级8.40.0版本搭配去开屏广告规则，目前没有出现MITM失败等其他问题 如开启可自行添加主机名 m.ctrip.com
-^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?__gw_os=IOS reject-200
+# ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?__gw_os=IOS reject-200
 # 开屏去广告
 # ^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif reject
 # 8.47.0以上版本会有部分图片加载不出来
