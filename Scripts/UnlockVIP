@@ -59,6 +59,10 @@ http-response ^https:\/\/api\.tiantiantiaosheng\.com\/api2\/s_plus_member\/info 
 # 扫描全能王  hostname = ap*.intsig.net
 http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? cript-path=https://github.com/ddgksf2013/dev/raw/main/CamscannerProCrack.js, requires-body=true, timeout=60, tag=扫描全能王
 
+# 摩途  hostname = motu.motumap.com
+http-response ^https:\/\/motu\.motumap\.com\/v3\/user\/info script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/motu.js, requires-body=true, timeout=60, tag=摩途
+
+
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.rc-backup.com, revenuecat.com, api.revenuecat.com, api.revenuecat.com, api.tiantiantiaosheng.com, ap*.intsig.net
+hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.rc-backup.com, revenuecat.com, api.revenuecat.com, api.revenuecat.com, api.tiantiantiaosheng.com, ap*.intsig.net, motu.motumap.com
 
