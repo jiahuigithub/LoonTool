@@ -184,3 +184,8 @@ cron "7 0,7 * * *" script-path=ShuiYiFei.js, timeout=360, enable=false, tag=水�
 
 # 新WPS签到
 cron "0 10 * * *" script-path=https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/wps/wps.js, tag=WPS签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/wps.png, enable=true
+
+# 小米商城抽奖脚本
+cron "25 8 * * *" script-path=https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/milottery/milottery.js, tag=小米抽奖签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/mishop.png, timeout=240, enable=true
+
+
