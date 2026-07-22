@@ -37,22 +37,11 @@ http-response https://h5.youzan.com/wscump/checkin/get_activity_by_yzuid_v2.json
 # 哈喽单车 api.hellobike.com
 http-request ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js, requires-body=true, timeout=10, tag=哈啰单车获取token
 
-# 滴滴打车果园 game.xiaojukeji.com
-# http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/newEnter script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_getToken.js, requires-body=true, timeout=60, tag=滴滴打车果园CK
-# http-request https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/newEnter script-path=https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ddgy.js, requires-body=true, timeout=60, tag=滴滴果园
-# http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi.js, requires-body=true, timeout=60, tag=滴滴打车APP获取CK
-
 # 美团红包签到 i.meituan.com
 http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js, timeout=10, requires-body=true, tag=美团获取CK
 
 # 蜜雪冰城签到 mxsa.mxbc.net
 http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60, tag=蜜雪冰城获取token
-
-# 微信支付有优惠 hostname = payapp.weixin.qq.com
-http-response https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login tag=微付金币, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,requires-body=true
-
-# 万达智慧商业 hostname = www.wandawic.com
-http-response ^https?:\/\/www\.wandawic\.com\/api\/wic-business-application\/api\/user\/query tag=万达智慧商业,script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/wdzhsy/wdzhsy.js,requires-body=true
 
 # 奈雪点单获取token hostname = tm-web.pin-dao.cn
 http-request ^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, requires-body=true, timeout=60, tag=奈雪点单获取token
@@ -67,107 +56,20 @@ http-response ^https:\/\/popvip\.paquapp\.com\/miniapp\/v2\/wechat\/getUserInfo 
 http-response ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enabled=true, tag=奶茶获取token
 http-request ^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enabled=true, tag=奶茶获取token
 
-# 希望云社区 hostname = xwyapi.newhope.cn
-http-request ^https:\/\/xwyapi.newhope.cn\/xwh-base\/message\/ticketFollow\/homepagePopUp\?customerId.+ script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/xwy.js, requires-body=true, timeout=10, tag=希望云社区获取token
-
-# 伊利-摇一摇 hostname = wx-camp-wzry.mscampapi.digitalyili.com
-#　http-response ^https:\/\/wx-camp-wzry\.mscampapi\.digitalyili\.com\/wx-camp-exercise\/stage\/qryUserInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, requires-body=true, tag=伊利-摇一摇_获取token
-
-# 海天美味馆 hostname = cmallapi.haday.cn
-http-response ^https:\/\/cmallapi\.haday\.cn\/buyer-api\/wechat\/mini\/phoneNew\/login script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/HaiTian/HaiTian.js, requires-body=true, tag=海天美味馆_获取token
-
 # IQOO社区 hostname = bbs-api.iqoo.com
 http-response ^https:\/\/bbs-api\.iqoo\.com\/api\/v3\/user\?userId= script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/IQOO/IQOO.js, requires-body=true, tag=IQOO社区_获取token
-
-# 毛铺草本荟 hostname = mpb.jingjiu.com
-http-response ^https:\/\/mpb\.jingjiu\.com\/proxy-he\/api\/user script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/MPCBH/MPCBH.js, requires-body=true, tag=毛铺草本荟_获取token
 
 # 三得利 hostname = xiaodian.miyatech.com
 http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/member\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/SDL/SDL.js, requires-body=true, timeout=20, tag=三得利_获取token
 
-# 哈根达斯 hostname = hgds-crm.myaiwecom.com
-# http-response ^https:\/\/hgds-crm\.myaiwecom\.com\/api\/wxapp\/member\/getMemberDetail script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/HGDS.js, requires-body=true, timeout=20, tag=哈根达斯_获取token
-
-# 七彩虹商城 hostname = shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, shop.skycolorful.com
-http-request ^https:\/\/shopapi\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token
-http-request ^https:\/\/shopapitest\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token2
-http-request ^https:\/\/shop\.skycolorful\.com:45677\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token3
-http-request ^https:\/\/shop\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token4
-
-# 泰康在线 hostname = m.tk.cn
-http-response ^https:\/\/m\.tk\.cn\/wechat_item\/rest\/xcx\/login script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TKZX/TKZX.js, requires-body=true, timeout=20, tag=泰康在线_获取token
-
 # 网易严选 hostname = act.you.163.com
 http-request ^https:\/\/act\.you\.163\.com\/act-attendance\/task\/list script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WYYX/WYYX.js, requires-body=true, timeout=20, tag=网易严选_获取cookie
-
-# 仰韶会员 hostname = hy.51pt.top
-http-response ^https:\/\/hy\.51pt\.top\/app\/ys\/mine\/getMemberInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YSHY/YSHY.js, requires-body=true, timeout=20, tag=仰韶会员_获取token
-
-# 云筑工匠 hostname = lwapp.yzw.cn
-# http-response ^https:\/\/lwapp\.yzw\.cn\/api\/Home\/GetWorkerInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YZGJ/YZGJ.js, requires-body=true, timeout=20, tag=云筑工匠_获取cookie
-
-# 习酒 hostname = xcx.exijiu.com
-http-response ^https:\/\/xcx\.exijiu\.com\/anti-channeling\/public\/index.php\/api\/v2\/Member\/getJifenShopMemberInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/XiJiu/XiJiu.js, requires-body=true, timeout=20, tag=习酒_获取token
 
 # 统一 hostname = xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com
 http-response ^https:\/\/xapi\.weimob\.com\/api3\/onecrm\/user\/center\/usercenter\/queryUserInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TongYi/TongYi.js, requires-body=true, timeout=20, tag=统一_获取token
 
-# 红牛会员俱乐部 hostname = xiaodian.miyatech.com
-http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/login\/wx-jc script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/RedBull/RedBull.js, requires-body=true, timeout=20, tag=红牛会员俱乐部_获取token
-
-# 麦斯威尔福利社 hostname = jde.mtbcpt.com
-http-response ^https:\/\/jde\.mtbcpt\.com\/api\/JDEMaxwellApi\/QueryHomeInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/MSWEFLS/MSWEFLS.js, requires-body=true, timeout=20, tag=麦斯威尔福利社_获取token
-
-# 健达福利社 hostname = mole.ferrero.com.cn
-http-response ^https:\/\/mole\.ferrero\.com\.cn\/boss\/boss\/scrm\/home\/info\/get script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JDFLS/JDFLS.js, requires-body=true, timeout=20, tag=健达福利社_获取token
-
-# 广汽丰田 hostname = gw.nevapp.gtmc.com.cn
-http-response ^https:\/\/gw\.nevapp\.gtmc\.com\.cn\/ha\/iam\/api\/sec\/oauth\/token script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, requires-body=true, timeout=20, tag=广汽丰田_获取token
-
-# 攀升科技+ hostname = psjia.ipason.com
-http-response ^https:\/\/psjia\.ipason\.com\/api\/v2\/member\/memberinfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/PSKJ/PSKJ.js, requires-body=true, timeout=20, tag=攀升科技+_获取token
-
-# 富士instax玩拍由我俱乐部 hostname = instax.app.xcxd.net.cn
-http-response ^https:\/\/instax\.app\.xcxd\.net\.cn\/api\/me script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/INSTAX/INSTAX.js, requires-body=true, timeout=20, tag=富士instax玩拍由我俱乐部_获取token
-
-# 古井贡酒 hostname = scrm.gujing.com
-http-response ^https:\/\/scrm\.gujing\.com\/gujing_scrm\/wxclient\/member\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GuJing/GuJing.js, requires-body=true, timeout=20, tag=古井贡酒_获取token
-
-# 日清食品体验馆 hostname = prod-api.nissinfoodium.com.cn
-http-response ^https:\/\/prod-api\.nissinfoodium\.com\.cn\/gw-shop\/app\/v1\/user\/detail script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/RQSP/RQSP.js, requires-body=true, timeout=20, tag=日清食品体验馆_获取token
-
-# 富连e充 hostname = api.nblinks.cn
-http-response ^https:\/\/api\.nblinks\.cn\/coreApi\/user\/consumer\/v1\/(aliPayAppLogin|weChatAppLogin) script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YongXin/YongXin.js, requires-body=true, timeout=20, tag=富连e充_获取token
-
-# 尊享金陵 hostname = app.jinlinghotels.com
-http-response ^https:\/\/app\.jinlinghotels\.com\/app\/member\/v1\/getMemberBasic script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, requires-body=true, timeout=20, tag=尊享金陵_获取token
-
-# 东方棘市 hostname = ys.shajixueyuan.com
-http-response ^https:\/\/ys\.shajixueyuan\.com\/api\/user\/info script-path=https://raw.githubusercontent.com/jiahuigithub/zzxm/main/backup/DFJS.js, requires-body=true, timeout=20, tag=东方棘市_获取token
-
 # 顾家家居 hostname = mc.kukahome.com
 # http-request ^https:\/\/mc\.kukahome\.com\/club-server\/member\/automaticLogin script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GJJJ/GJJJ.js, requires-body=true, timeout=20, tag=顾家家居_获取token
-
-# 太平通 hostname = ecustomer.cntaiping.com
-http-response ^https:\/\/ecustomer\.cntaiping\.com\/tpayms\/app\/tpay\/account\/getAcct script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/BackUp/TaiPingTong/TaiPingTong.js, requires-body=true, tag=太平通_获取token
-
-# 伊利-春节 hostname = msmarket.msx.digitalyili.com
-# http-response ^https:\/\/msmarket\.msx\.digitalyili\.com\/gateway\/api\/auth\/account\/user\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, requires-body=true, tag=伊利-春节_获取token
-
-# 龙湖天街获取 hostname = gw2c-hw-open.longfor.com
-http-request ^https:\/\/msmarket\.msx\.digitalyili\.com\/gateway\/api\/auth\/account\/user\/info script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/lhtj/lhtj.js, requires-body=true, timeout=60, tag=龙湖天街获取Cookie
-
-# 卫岗天天订签到 hostname = ttdprod-mp.4008618618.com
-http-request ^https:\/\/ttdprod-mp\.4008618618\.com\/mallbusiness\/ums\/common\/getMemberInfo script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/wgttd.js, tag=卫岗天天订Cookie
-
-# 雀巢会员俱乐部 hostname = crm.nestlechinese.com
-http-request ^https:\/\/crm.nestlechinese.com\/openapi\/pointsservice\/api\/Points\/getuserbalance script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/nestle.js, timeout=10, tag=雀巢会员俱乐部获取token
-
-# 正佳广场小程序签到 hostname = member-pro.zhengjiamax.com
-http-response ^https://member-pro\.zhengjiamax\.com/member/checkMemberSession script-path=https://raw.githubusercontent.com/shufflewzc/faker/main/zhengjia.js, requires-body=true, timeout=60, tag=正佳广场小程序签到Cookie
-
-# 鲸才招聘 hostname = gateway.5jingcai.com
-http-response ^https:\/\/gateway\.5jingcai\.com\/mini\/data\/user\/person.json script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingCai/JingCai.js, requires-body=true, timeout=60, tag=鲸才招聘_获取token
 
 
 
@@ -211,5 +113,5 @@ http-request ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/venue\/batch tag=
 
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, i.meituan.com, mxsa.mxbc.net, payapp.weixin.qq.com, www.wandawic.com, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, xwyapi.newhope.cn, cmallapi.haday.cn, bbs-api.iqoo.com, mpb.jingjiu.com, xiaodian.miyatech.com, shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com, shop.skycolorful.com, m.tk.cn, act.you.163.com, ys.shajixueyuan.com, hy.51pt.top, xcx.exijiu.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, xiaodian.miyatech.com, jde.mtbcpt.com, mole.ferrero.com.cn, gw.nevapp.gtmc.com.cn, psjia.ipason.com, instax.app.xcxd.net.cn, scrm.gujing.com, prod-api.nissinfoodium.com.cn, api.nblinks.cn, app.jinlinghotels.com, mc.kukahome.com, ecustomer.cntaiping.com, gw2c-hw-open.longfor.com, ttdprod-mp.4008618618.com, crm.nestlechinese.com, member-pro.zhengjiamax.com, gateway.5jingcai.com, momclub.feihe.com, openapp.fmy90.com, mcs-mimp-web.sf-express.com, api.dingdingzn.com, memberapi.ai.ipaiyun.cn, mc.kukahome.com, maicai.api.ddxq.mobi, apapia-sqk-weblogic.manmanbuy.com, personal-act.wps.cn, shop-api.retail.mi.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, i.meituan.com, mxsa.mxbc.net, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, bbs-api.iqoo.com, xiaodian.miyatech.com, act.you.163.com, ys.shajixueyuan.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, mc.kukahome.com, momclub.feihe.com, openapp.fmy90.com, mcs-mimp-web.sf-express.com, api.dingdingzn.com, memberapi.ai.ipaiyun.cn, mc.kukahome.com, maicai.api.ddxq.mobi, apapia-sqk-weblogic.manmanbuy.com, personal-act.wps.cn, shop-api.retail.mi.com
 
