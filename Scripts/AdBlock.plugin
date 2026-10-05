@@ -299,7 +299,7 @@ DOMAIN, ads.cup.com.cn, REJECT
 # > 12123
 # hostname = gab.122.gov.cn
 #^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery reject
-request if ${url} ~= /^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$/i then reject(404)
+^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ reject
 
 
 # >>>>>>>>>>>>>>> ✅ 3 ✅ <<<<<<<<<<<<<<
@@ -320,7 +320,7 @@ request if ${url} ~= /^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$/i
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > 爱企查
 # hostname = b2baifanfan.baidu.com
-request if ${url} ~= /^https?:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum/i then reject(200)
+^https?:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
 
 
 # ======= B ======= #
@@ -329,10 +329,10 @@ request if ${url} ~= /^https?:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/co
 
 # ======= D ======= #
 # > 大众点评去开屏 
-response if ${url} ~= /^https?:\/\/img\.meituan\.net\/dpmobile\//i then response.body.mock("json", "{}")
+^https?:\/\/img\.meituan\.net\/dpmobile\/ mock-response-body data-type=json data="{}"
 
 # 叮叮充电 hostname = api.dingdingzn.com
-response if ${url} ~= /^https:\/\/api.dingdingzn.com\/uapp\/promotion\/ad\/list/i then response.body.mock("json", "", 200)
+^https:\/\/api.dingdingzn.com\/uapp\/promotion\/ad\/list mock-response-body data-type=json status-code=200
 
 # ======= E ======= #
 
@@ -342,23 +342,23 @@ response if ${url} ~= /^https:\/\/api.dingdingzn.com\/uapp\/promotion\/ad\/list/
 # > 工商银行
 # hostname = v.icbc.com.cn
 # 如开启可自行添加主机名
-request if ${url} ~= /^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\//i then reject(200)
+^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ reject-200
 
 
 # ======= H ======= #
 # > 盒马
 # hostname = acs.m.taobao.com, acs-m.freshippo.com
-request if ${url} ~= /^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.hippotown\.tabbar\.info/i then reject(404)
-request if ${url} ~= /^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage/i then reject(200)
-request if ${url} ~= /^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.crm\.platform\.ma\.recommend/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.mimir\.recommend\.after\.purchase\.activity/i then reject_dict(200)
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.hippotown\.tabbar\.info reject
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene reject-dict
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage reject-200
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice reject-dict
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.crm\.platform\.ma\.recommend reject-dict
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.mimir\.recommend\.after\.purchase\.activity reject-dict
 
 # > 花小猪
 # hostname = res.hongyibo.com.cn
 # 开屏
-request if ${url} ~= /^https?:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity\/mget\?_t/i then reject_dict(200)
+^https?:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity\/mget\?_t reject-dict
 
 
 # ======= I ======= #
@@ -366,41 +366,41 @@ request if ${url} ~= /^https?:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activi
 # ======= J ======= #
 # > 建设银行
 # hostname = image1.ccb.com
-request if ${url} ~= /^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(?:nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png/i then reject(404)
+^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(?:nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
 
 # > 建行生活
 # hostname = yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me
 # 首页横幅广告
-request if ${url} ~= /^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A(002|006|009|119|120)/i then reject(200)
-request if ${url} ~= /^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341C147/i then reject(200)
+^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A(002|006|009|119|120) reject-200
+^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341C147 reject-200
 # 我的页面悬浮广告
-response if ${url} ~= /^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?/i then response.body.replace(/"TAG_AD_INFO"/, "\"\"")
+^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\? response-body-replace-regex "TAG_AD_INFO" ""
 # 内置饿了么
-request if ${url} ~= /^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.eleme\.\w+\.trigger\.respond/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.wamai\.store\.detail\.miniapp\.popup/i then reject(404)
-request if ${url} ~= /^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopcouponpopupservice\.getshopcouponspopup/i then reject(404)
-response if ${url} ~= /^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource/i then response.body.replace(/posterList/, "\"\"")
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.eleme\.\w+\.trigger\.respond reject-dict
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.wamai\.store\.detail\.miniapp\.popup reject
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopcouponpopupservice\.getshopcouponspopup reject
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource response-body-replace-regex posterList ""
 
 # > 交通银行
 # hostname = download1.bankcomm.com
-request if ${url} ~= /^https?:\/\/download1\.bankcomm\.com\/chngweb\/CHNRCSP\/media/i then reject(404)
-request if ${url} ~= /^https?:\/\/download1\.bankcomm\.com\/mobs6-inner\/offline\/static\/releaseConf/i then reject(404)
+^https?:\/\/download1\.bankcomm\.com\/chngweb\/CHNRCSP\/media reject
+^https?:\/\/download1\.bankcomm\.com\/mobs6-inner\/offline\/static\/releaseConf reject
 
 
 # > 京东
 # hostname = api.m.jd.com
-request if ${url} ~= /^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs/i then reject(200)
-request if ${url} ~= /^http:\/\/\w{32}\.jddebug\.com\/diagnose\?/i then reject(404)
-request if ${url} ~= /^https:\/\/api\.m\.jd\.com\/\?loginType=11/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052/i then reject(404)
-request if ${url} ~= /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06])/i then reject_dict(200)
-response if ${url} ~= /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising/i then response.body.replace(/jdLiteAdvertisingVO/, "sooyaaabo")
-response if ${url} ~= /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig/i then response.json.replace(["data.JDMessage.socketmonitor.isSocketEstablishedAhead", "data.JDMessage.socketmonitor.isSocketReport", "data.JDHttpToolKit.httpdns.httpdns"], [0, 0, 0])
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? reject
+^https:\/\/api\.m\.jd\.com\/\?loginType=11 reject-dict
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 reject
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) reject-dict
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising response-body-replace-regex jdLiteAdvertisingVO sooyaaabo
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig response-body-json-replace data.JDMessage.socketmonitor.isSocketEstablishedAhead 0 data.JDMessage.socketmonitor.isSocketReport 0 data.JDHttpToolKit.httpdns.httpdns 0
 
 
 # > 今日水印相机
 # hostname = api.sogaha.cn
-request if ${url} ~= /^https?:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip/i then reject_dict(200)
+^https?:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip reject-dict
 
 # ======= K ======= #
 
@@ -408,37 +408,37 @@ request if ${url} ~= /^https?:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip/i then rejec
 
 # ======= M ======= #
 # > 芒果tv
-request if ${url} ~= /^https?:\/\/mobile.da.mgtv.com\/m\/page/i then reject(404)
+^https?://mobile.da.mgtv.com\/m\/page reject
 
 # > 美团 & 美团外卖
 # hostname = img.meituan.net, s3plus.meituan.net, flowplus.meituan.net
-request if ${url} ~= /^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\?/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4)/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$/i then reject_dict(200)
+^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
+^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) reject-dict
+^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
+^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
+^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
 # 美团订单详情页更多推荐
-request if ${url} ~= /^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends/i then reject_dict(200)
+^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
 
 
 # > 买单吧
 # hostname = creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com
-request if ${url} ~= /^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg)/i then reject(404)
-request if ${url} ~= /^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do/i then reject(200)
-request if ${url} ~= /^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion/i then reject(200)
+^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg) reject
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do reject-200
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion reject-200
 
 # > 咪咕
 # hostname = *.cmvideo.cn
-request if ${url} ~= /^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\//i then reject(200)
-request if ${url} ~= /^https?:\/\/ggic\d?\.cmvideo\.cn\/ad\//i then reject(200)
-request if ${url} ~= /^https?:\/\/ggx\.cmvideo\.cn\/request\//i then reject(200)
-request if ${url} ~= /^https?:\/\/.+?\/cdn-adn\//i then reject(200)
+^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ reject-200
+^https?:\/\/ggic\d?\.cmvideo\.cn\/ad\/ reject-200
+^https?:\/\/ggx\.cmvideo\.cn\/request\/ reject-200
+^https?:\/\/.+?\/cdn-adn\/ reject-200
 
 
 # ======= N ======= #
 # > GoodNotes
 # hostname = isi.csan.*（已添加）
-request if ${url} ~= /^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$)/ then request.header.set("X-RevenueCat-ETag", "") | request.header.set("x-revenuecat-etag", "")
+^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$) header-replace X-RevenueCat-ETag "" x-revenuecat-etag ""
 
 # ======= O ======= #
 
@@ -449,9 +449,9 @@ request if ${url} ~= /^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\
 # >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
 # > 人民日报
 # hostname = app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com
-request if ${url} ~= /^https?:\/\/app\.peopleapp\.com\/Api\/\d+\/HomeApi\/(adv|getAdvertImage)/i then reject(404)
-request if ${url} ~= /^https?:\/\/stat\.peopleapp\.com\//i then reject(404)
-request if ${url} ~= /^https?:\/\/adstatic\.peopleapp\.com\/upload\/AppLoad\/.*.(jpg|png)/i then reject(200)
+^https?:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) reject
+^https?:\/\/stat\.peopleapp\.com\/ reject
+^https?:\/\/adstatic\.peopleapp\.com\/upload\/AppLoad\/.*.(jpg|png) reject-200
 
 # ======= S ======= #
 
@@ -463,31 +463,31 @@ request if ${url} ~= /^https?:\/\/adstatic\.peopleapp\.com\/upload\/AppLoad\/.*.
 
 # ======= W ======= #
 # > 移除微信公众号文章底栏都在搜
-request if ${url} ~= /^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword/i then reject_dict(200)
+^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword reject-dict
 
 
 # ======= X ======= #
 # > 小兔充充
 # hostname = ad.xiaotucc.com, mapi.xiaotucc.com
 # 小程序净化
-request if ${url} ~= /^https?:\/\/ad\.xiaotucc\.com\/advert/i then reject(404)
+^https?:\/\/ad\.xiaotucc\.com\/advert reject
 
 # > 晓晓优选
 # hostname = xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
 # 多余模块
 # ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra reject-dict
-request if ${url} ~= /^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad/i then reject(404)
-request if ${url} ~= /^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad/i then reject(404)
-request if ${url} ~= /^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner/i then reject(404)
-request if ${url} ~= /^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/new_banner\?/i then reject(404)
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/new_banner\? reject
 # 弹窗广告
-request if ${url} ~= /^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad/i then reject(404)
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
 #^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad reject-dict
 # 右下角的悬浮广告
-request if ${url} ~= /^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show/i then reject(404)
-request if ${url} ~= /^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/urban\/activity\/index\/data\?agentId=12/i then reject(404)
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/urban\/activity\/index\/data\?agentId=12 reject
 # 禁止上报设备信息
-request if ${url} ~= /^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form/i then reject(404)
+^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form reject
 
 # > 携程
 # hostname = m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com
@@ -502,90 +502,90 @@ request if ${url} ~= /^https?:\/\/statistic\.live\.126\.net\/statics\/report\/co
 # ======= Y ======= #
 # > 云闪付
 # hostname = wallet.95516.com
-request if ${url} ~= /^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1/i then reject(404)
+^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
 
 # > 盐甜相机 
-request if ${url} ~= /^http:\/\/api-ad\.kajicam\.com\/ad\/pop\/rule\/v2/i then reject(404)
+^http:\/\/api-ad\.kajicam\.com\/ad\/pop\/rule\/v2 reject
 
 # > 邮储银行
 # hostname = static.psbc.com, mcc.psbc.com
-request if ${url} ~= /^https?:\/\/static.psbc.com:8090\/mbank_f\/images\/[0-9]+\.png/i then reject(200)
-request if ${url} ~= /^https?:\/\/mcc.psbc.com:9090\/mcc\/resources\/[0-9]+\.(jpg|png)/i then reject(200)
+^https?:\/\/static.psbc.com:8090\/mbank_f\/images\/[0-9]+\.png - reject-200
+^https?:\/\/mcc.psbc.com:9090\/mcc\/resources\/[0-9]+\.(jpg|png) reject-200
 
 # >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
 # > 招商银行
 # hostname = s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com
 # 开屏广告
-request if ${url} ~= /^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\//i then reject(404)
-request if ${url} ~= /^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig/i then reject(200)
+^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ reject
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig reject-200
 # 首页横幅广告
-request if ${url} ~= /^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic/i then reject_dict(200)
+^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
 
 
 # > 中国移动
 # hostname = client.app.coc.10086.cn, app.10086.cn
-request if ${url} ~= /^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit/i then reject(200)
-request if ${url} ~= /^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList/i then reject(404)
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList reject
 # 多个悬浮窗
-request if ${url} ~= /^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket/i then reject(404)
+^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket reject
 
 # > 中国移动云盘
 # hostname = mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com
-request if ${url} ~= /^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/IAdvert/i then reject(200)
-request if ${url} ~= /^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/v\d\/getAdverts/i then reject(200)
-request if ${url} ~= /^https?:\/\/middle\.yun\.139\.com\/openapi\/cardConfig\/queryCardInfoV3/i then reject(200)
-request if ${url} ~= /^https?:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/adv-filter\/AdInfoFilter\/getAdInfos/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/mrp\.mcloud\.139\.com\/mc\/mc-client-service\/openapi\/letter\/query/i then reject_dict(200)
+^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/IAdvert reject-200
+^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/v\d\/getAdverts reject-200
+^https?:\/\/middle\.yun\.139\.com\/openapi\/cardConfig\/queryCardInfoV3 reject-200
+^https?:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/adv-filter\/AdInfoFilter\/getAdInfos reject-dict
+^https?:\/\/mrp\.mcloud\.139\.com\/mc\/mc-client-service\/openapi\/letter\/query reject-dict
 
 # > 中国联通
 # hostname = m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
-request if ${url} ~= /^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv)/i then reject_img(200)
-request if ${url} ~= /^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd)/i then reject_img(200)
-request if ${url} ~= /^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js)/i then reject_img(200)
-request if ${url} ~= /^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3}/i then reject_img(200)
-request if ${url} ~= /^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer=/i then reject_img(200)
+^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) reject-img
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm reject-dict
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) reject-img
+^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) reject-img
+^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} reject-img
+^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= reject-img
 
 # > 中国电信
 # hostname = cloud.189.cn, zt-app.go189.cn
-request if ${url} ~= /^https?:\/\/cloud\.189\.cn\/include\/splash\//i then reject(404)
-request if ${url} ~= /^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation/i then reject_img(200)
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation reject-img
 
 
 # > 菜鸟裹裹
 # hostname = cn-acs.m.cainiao.com, amdc.m.taobao.com
 # 首页 好物推荐,商品推广,底部标签页,快递详情页,问卷调查,主页图标
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|index)\.cn/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbopen\.miniapp\.recommend\.cpc\.cn/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn/i then reject_dict(200)
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|index)\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbopen\.miniapp\.recommend\.cpc\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn reject-dict
 # 发现页 数字角标 裹裹券
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cncreditmarket\.hit\.getactivityhit\.cn/i then reject_dict(200)
-request if ${url} ~= /^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.longquan\.place\.getpageresourcecontent\.cn/i then reject_dict(200)
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cncreditmarket\.hit\.getactivityhit\.cn reject-dict
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.longquan\.place\.getpageresourcecontent\.cn reject-dict
 # 支付宝-菜鸟
-request if ${url} ~= /^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads/i then reject(404)
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads reject
 
 [Script]
 # > 京东
 # hostname = api.m.jd.com
-response if ${url} ~= /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome)/i then script("https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js") with tag="[京东]移除广告", requires_body=true
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js, requires-body = true, tag = [京东]移除广告
 
 # > 京东极速版
-response if ${url} ~= /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising/i then script("https://loon.103516.xyz/Script/CommonScript/replace-body.js", "jdLiteAdvertisingVO -> sooyaaabo") with tag="[京东]移除京东极速版广告", requires_body=true
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://loon.103516.xyz/Script/CommonScript/replace-body.js, argument = jdLiteAdvertisingVO -> sooyaaabo, requires-body = true, tag = [京东]移除京东极速版广告
 
 # > 盒马
-response if ${url} ~= /^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(?>indexpage|mypage|tabfeedstream)/i then script("https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/freshippo.js") with tag="盒马", timeout=60, requires_body=true
+http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(?>indexpage|mypage|tabfeedstream) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/freshippo.js, requires-body=true, timeout=60, tag=盒马, enable=true
 
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
 # > 买单吧
-response if ${url} ~= /^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1&/i then script("https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mdb.js") with tag="买单吧", timeout=60, requires_body=true
+http-response ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mdb.js, requires-body=true, timeout=60, tag=买单吧, enable=true
 
 # >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
 # > 小兔充充
-response if ${url} ~= /^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity)/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js") with tag="小兔充充", timeout=60, requires_body=true
+http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body=true, timeout=60, tag=小兔充充, enable=true
 
 
 [Mitm]

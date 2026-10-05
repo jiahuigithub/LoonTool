@@ -2,10 +2,12 @@
 
 解锁GoodNotes、Notability内购会员 
 
+[Rewrite]
+^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$) header-replace X-RevenueCat-ETag "" x-revenuecat-etag ""
+
 [Script]
-request if ${url} ~= /^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$)/ then request.header.set("X-RevenueCat-ETag", "") | request.header.set("x-revenuecat-etag", "")
-response if ${url} ~= /^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$)/ then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/goodbility.vip.js") with requires_body=true
-response if ${url} ~= /^https?:\/\/notability\.com\/global/ then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/goodbility.vip.js") with requires_body=true
+http-response ^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$) script-path=https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/goodbility.vip.js,requires-body=true,enable=true, tag=GoodNotes
+http-response ^https?:\/\/notability\.com\/global script-path=https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/goodbility.vip.js,requires-body=true,enable=true, tag=Notability
 
 [MitM]
 hostname = isi.csan.*, notability.com
