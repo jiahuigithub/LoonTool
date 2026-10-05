@@ -59,7 +59,7 @@ http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCA
 http-response ^https:\/\/api\.tiantiantiaosheng\.com\/api2\/s_plus_member\/info script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/TTTS.js, requires-body=true, timeout=60, tag=天天跳绳
 
 # 扫描全能王  hostname = ap*.intsig.net
-http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? cript-path=https://github.com/ddgksf2013/dev/raw/main/CamscannerProCrack.js, requires-body=true, timeout=60, tag=扫描全能王
+http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? script-path=https://github.com/ddgksf2013/dev/raw/main/CamscannerProCrack.js, requires-body=true, timeout=60, tag=扫描全能王
 
 # 摩途  hostname = motu.motumap.com
 http-response ^https:\/\/motu\.motumap\.com\/v3\/user\/info script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/motu.js, requires-body=true, timeout=60, tag=摩途
