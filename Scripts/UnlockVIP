@@ -9,8 +9,8 @@
 
 [Script]
 # 解锁GoodNotes、Notability内购会员 hostname = isi.csan.*, notability.com
-response if ${url} ~= /^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$)/ then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/Scripts/JS/goodbility.vip.js") with requires_body=true, timeout=10, enabled=true, tag=GoodNotes
-response if ${url} ~= /^https?:\/\/notability\.com\/global/ then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/Scripts/JS/goodbility.vip.js") with requires_body=true, timeout=10, enabled=true, tag=Notability
+response if ${url} ~= /^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$)/ then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/goodbility.vip.js") with requires_body=true, timeout=10, enabled=true, tag=GoodNotes
+response if ${url} ~= /^https?:\/\/notability\.com\/global/ then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/goodbility.vip.js") with requires_body=true, timeout=10, enabled=true, tag=Notability
 
 # 幕布会员 api2.mubu.com
 response if ${url} ~= /https:\/\/api2.mubu.com\/v3\/api\/user\/current_user/i then script("https://raw.githubusercontent.com/afengye/QX/main/mubu.js") with tag="幕布会员", timeout=60, requires_body=true
