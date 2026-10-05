@@ -436,6 +436,9 @@ request if ${url} ~= /^https?:\/\/.+?\/cdn-adn\//i then reject(200)
 
 
 # ======= N ======= #
+# > GoodNotes
+# hostname = isi.csan.*（已添加）
+request if ${url} ~= /^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$)/ then request.header.set("X-RevenueCat-ETag", "") | request.header.set("x-revenuecat-etag", "")
 
 # ======= O ======= #
 
