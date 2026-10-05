@@ -8,61 +8,62 @@
 #############################################
 
 [Script]
-# NotabilityPro notability.com
-http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/Not.js, requires-body=true, timeout=10, enabled=true, tag=NotabilityPro
+# 解锁GoodNotes、Notability内购会员 hostname = isi.csan.*, notability.com
+response if ${url} ~= /^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers(\/[^/]+)?$)/ then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/Scripts/JS/goodbility.vip.js") with requires_body=true, timeout=10, enabled=true, tag=GoodNotes
+response if ${url} ~= /^https?:\/\/notability\.com\/global/ then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/Scripts/JS/goodbility.vip.js") with requires_body=true, timeout=10, enabled=true, tag=Notability
 
 # 幕布会员 api2.mubu.com
-http-response https://api2.mubu.com/v3/api/user/current_user script-path=https://raw.githubusercontent.com/afengye/QX/main/mubu.js, requires-body=true, timeout=60, tag=幕布会员
+response if ${url} ~= /https:\/\/api2.mubu.com\/v3\/api\/user\/current_user/i then script("https://raw.githubusercontent.com/afengye/QX/main/mubu.js") with tag="幕布会员", timeout=60, requires_body=true
 
 # 网易云会员 hostname = *.music.163.com
-http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js, timeout=60, tag=网易云会员
+request if ${url} ~= /^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$/i then script("https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js") with tag="网易云会员", timeout=60
 
 # Spotify Premium spclient.wg.spotify.com
-http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=10, tag=spotifyJson
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotifyProto
+request if ${url} ~= /^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\//i then script("https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js") with tag="spotifyJson", timeout=10
+response if ${url} ~= /^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$/i then script("https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js") with tag="spotifyProto", timeout=10, requires_body=true, binary_body_mode=true
 
 # 百度网盘解锁 pan.baidu.com
-http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://gitlab.com/isous/loonresource/-/raw/main/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body=true, timeout=10, tag=百度网盘解锁SVIP权益
+response if ${url} ~= /^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user/i then script("https://gitlab.com/isous/loonresource/-/raw/main/Script/BaiduNetDisk/BaiduNetDisk_crack.js") with tag="百度网盘解锁SVIP权益", timeout=10, requires_body=true
 
 # 百度文库解锁 appwk.baidu.com
-http-response ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/baidulibrary.js, requires-body=true, timeout=10, tag=百度文库解锁
+response if ${url} ~= /^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo/i then script("https://github.com/deezertidal/private/raw/master/js-backup/Crack/baidulibrary.js") with tag="百度文库解锁", timeout=10, requires_body=true
 
 # B612咔叽 user-kaji-api.b612kaji.com
-http-response https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/612.js, requires-body=true, timeout=10, tag=B612咔叽
+response if ${url} ~= /https:\/\/user-kaji-api.b612kaji.com\/v1\/purchase\/subscription\/subscriber\/status/i then script("https://github.com/deezertidal/private/raw/master/js-backup/Crack/612.js") with tag="B612咔叽", timeout=10, requires_body=true
 
 # 爱企查vip aiqicha.baidu.com
-http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js, requires-body=true, timeout=10, tag=爱企查vip
+response if ${url} ~= /^https:\/\/aiqicha.baidu.com\/usercenter\/getvipinfoajax/i then script("https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js") with tag="爱企查vip", timeout=10, requires_body=true
 
 # 盐甜相机VIP hostname = purchase-qingtu-api.b612kaji.com,api-qingtu.kajicam.com,purchase-tianyan-api.tianyancam.com,api-ad.kajicam.com 
 # http-response ^http[s]?:\/\/purchase-tianyan-api.tianyancam.com/v1/purchase/subscription/subscriber/status script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/tianyancam.js, requires-body=true, timeout=60, tag=盐甜相机解锁
-http-response ^https?:\/\/purchase-tianyan-api.tianyancam.com\/v1\/purchase\/subscription\/subscriber\/status script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/tyxj.js, requires-body=true, timeout=60, tag=盐甜相机解锁
+response if ${url} ~= /^https?:\/\/purchase-tianyan-api.tianyancam.com\/v1\/purchase\/subscription\/subscriber\/status/i then script("https://raw.githubusercontent.com/WeiGiegie/666/main/tyxj.js") with tag="盐甜相机解锁", timeout=60, requires_body=true
 
 # Xmind-思维导图 *xmind.*
-http-response ^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js, requires-body=true, enabled=false, tag=Xmind解锁
+response if ${url} ~= /^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+)/i then script("https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js") with enable=false, tag="Xmind解锁", requires_body=true
 
 # 阿里云盘VIP hostname = *.aliyundrive.com, *.alipan.com
-http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js, requires-body=true, timeout=60, tag=阿里云盘VIP
+response if ${url} ~= /^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user))/i then script("https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js") with tag="阿里云盘VIP", timeout=60, requires_body=true
 
 # WPS会员解锁 hostname = vas.wps.cn
-http-response ^https:\/\/vas\.wps\.cn\/query\/api\/v1\/list_purchase_info script-path=https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js, requires-body=true, timeout=60, tag=WPSOffice
+response if ${url} ~= /^https:\/\/vas\.wps\.cn\/query\/api\/v1\/list_purchase_info/i then script("https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js") with tag="WPSOffice", timeout=60, requires_body=true
 
 # Pillow睡眠周期跟踪器+解锁订阅 hostname = api.rc-backup.com, revenuecat.com, api.revenuecat.com
 # http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Pillow.js, requires-body=true, timeout=60, tag=pillow解锁
-http-response ^https:\/\/(api\.rc-backup\.com|api\.revenuecat\.com)\/v1\/(receipts|subscribers) script-path=https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/UnLockPillow.js, requires-body=true, timeout=60, tag=pillow解锁
+response if ${url} ~= /^https:\/\/(api\.rc-backup\.com|api\.revenuecat\.com)\/v1\/(receipts|subscribers)/i then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/UnLockPillow.js") with tag="pillow解锁", timeout=60, requires_body=true
 
 # Unlock Permanent VIP hostname = api.revenuecat.com
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrowForeverVipCrack.js, requires-body=true, timeout=60, tag=GrowForeverVipCrack
+response if ${url} ~= /^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$/i then script("https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrowForeverVipCrack.js") with tag="GrowForeverVipCrack", timeout=60, requires_body=true
 
 # 天天跳绳——解锁VIP hostname = api.tiantiantiaosheng.com
-http-response ^https:\/\/api\.tiantiantiaosheng\.com\/api2\/s_plus_member\/info script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/TTTS.js, requires-body=true, timeout=60, tag=天天跳绳
+response if ${url} ~= /^https:\/\/api\.tiantiantiaosheng\.com\/api2\/s_plus_member\/info/i then script("https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/TTTS.js") with tag="天天跳绳", timeout=60, requires_body=true
 
 # 扫描全能王  hostname = ap*.intsig.net
-http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? cript-path=https://github.com/ddgksf2013/dev/raw/main/CamscannerProCrack.js, requires-body=true, timeout=60, tag=扫描全能王
+response if ${url} ~= /^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?/i then script("https://github.com/ddgksf2013/dev/raw/main/CamscannerProCrack.js") with tag="扫描全能王", timeout=60, requires_body=true
 
 # 摩途  hostname = motu.motumap.com
-http-response ^https:\/\/motu\.motumap\.com\/v3\/user\/info script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/motu.js, requires-body=true, timeout=60, tag=摩途
+response if ${url} ~= /^https:\/\/motu\.motumap\.com\/v3\/user\/info/i then script("https://raw.githubusercontent.com/WeiGiegie/666/main/motu.js") with tag="摩途", timeout=60, requires_body=true
 
 
 [MITM]
-hostname=notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.rc-backup.com, revenuecat.com, api.revenuecat.com, api.revenuecat.com, api.tiantiantiaosheng.com, ap*.intsig.net, motu.motumap.com
+hostname =  isi.csan.*, notability.com, api2.mubu.com, *.music.163.com, spclient.wg.spotify.com, pan.baidu.com, appwk.baidu.com, user-kaji-api.b612kaji.com, aiqicha.baidu.com, purchase-qingtu-api.b612kaji.com, api-qingtu.kajicam.com, purchase-tianyan-api.tianyancam.com, api-ad.kajicam.com, *xmind.*, *.mgtv.com, *.aliyundrive.com, *.alipan.com, vas.wps.cn, api.rc-backup.com, revenuecat.com, api.revenuecat.com, api.revenuecat.com, api.tiantiantiaosheng.com, ap*.intsig.net, motu.motumap.com
 

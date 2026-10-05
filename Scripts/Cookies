@@ -8,65 +8,66 @@
 #############################################
 [Script]
 # 京东 api.m.jd.com
-http-request ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, requires-body=true, timeout=10, tag=获取京东Cookie
+request if ${url} ~= /^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?)/i then script("https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js") with tag="获取京东Cookie", timeout=10, requires_body=true
 
 # 高德打车签到  *.amap.com
-http-response ^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=10, tag=高德地图, img-url=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Image/IMG_0967.jpeg
+response if ${url} ~= /^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query/i then script("https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js") with tag="高德地图", img_url="https://raw.githubusercontent.com/Crazy-Z7/Task/main/Image/IMG_0967.jpeg", timeout=10, requires_body=true
 
 # 建行生活  yunbusiness.ccb.com
-http-request ^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode=(A3341A040|A3341A038) script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, requires-body=true, timeout=10, enabled=true, tag=建行生活CK
+request if ${url} ~= /^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode=(A3341A040|A3341A038)/i then script("https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js") with tag="建行生活CK", timeout=10, requires_body=true
 
 # 美团买菜  mall.meituan.com
-http-request https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js, timeout=10, requires-body=true, tag=美团买菜CK
+request if ${url} ~= /https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?/i then script("https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js") with tag="美团买菜CK", timeout=10, requires_body=true
 
 # 海信爱家  sweixin.hisense.com
-http-response ^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember tag=海信爱家CK, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,requires-body=1
+response if ${url} ~= /^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember/i then script("https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js") with tag="海信爱家CK", requires_body=true
 
 # 阿里云盘签到 auth.aliyundrive.com
-http-response ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=10, tag=阿里云盘签到CK
+response if ${url} ~= /^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token/i then script("https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js") with tag="阿里云盘签到CK", timeout=10, requires_body=true
 
 # 云闪付 hostname = youhui.95516.com
-http-request ^https:\/\/youhui.95516.com\/newsign\/api\/sharing_power\/showUserTask script-path=https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js, timeout=10, tag=云闪付签到获取token
+request if ${url} ~= /^https:\/\/youhui.95516.com\/newsign\/api\/sharing_power\/showUserTask/i then script("https://raw.githubusercontent.com/i-liulang/Surge/main/ysf.js") with tag="云闪付签到获取token", timeout=10
 
-# BiliBili每日等级任务 app.bilibili.com, m.bilibili.com
-http-reponse ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(APP)
-http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(网页)
+# BiliBili每日等级任务 app.bilibili.com
+response if ${url} ~= /^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?/i then script("https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js") with tag="B站Cookie(扫码)", timeout=30
+request if ${url} ~= /^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?/i then script("https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js") with tag="B站Cookie(网页)"
+
 # Sakura Checkbox｜有赞小程序批量签到工具 h5.youzan.com
-http-response https://h5.youzan.com/wscump/checkin/get_activity_by_yzuid_v2.json.+ script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js, timeout=300, tag=Sakura Checkbox获取token
+response if ${url} ~= /https:\/\/h5.youzan.com\/wscump\/checkin\/get_activity_by_yzuid_v2.json.+/i then script("https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js") with tag="Sakura Checkbox获取token", timeout=300
 
 # 哈喽单车 api.hellobike.com
-http-request ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js, requires-body=true, timeout=10, tag=哈啰单车获取token
+request if ${url} ~= /^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo/i then script("https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js") with tag="哈啰单车获取token", timeout=10, requires_body=true
 
 # 美团红包签到 i.meituan.com
-http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js, timeout=10, requires-body=true, tag=美团获取CK
+request if ${url} ~= /^https:\/\/i.meituan.com\/evolve\/signin\/signpost\//i then script("https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js") with tag="美团获取CK", timeout=10, requires_body=true
 
 # 蜜雪冰城签到 mxsa.mxbc.net
-http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60, tag=蜜雪冰城获取token
+response if ${url} ~= /^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info/i then script("https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js") with tag="蜜雪冰城获取token", timeout=60, requires_body=true
 
 # 奈雪点单获取token hostname = tm-web.pin-dao.cn
-http-request ^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, requires-body=true, timeout=60, tag=奈雪点单获取token
+request if ${url} ~= /^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo/i then script("https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js") with tag="奈雪点单获取token", timeout=60, requires_body=true
 
 # 泡泡玛特 hostname = popvip.paquapp.com
-http-response ^https:\/\/popvip\.paquapp\.com\/miniapp\/v2\/wechat\/getUserInfo script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js, requires-body=true, timeout=60, tag=泡泡玛特获取token
+response if ${url} ~= /^https:\/\/popvip\.paquapp\.com\/miniapp\/v2\/wechat\/getUserInfo/i then script("https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js") with tag="泡泡玛特获取token", timeout=60, requires_body=true
 
 # 顺丰速运 hostname = mcs-mimp-web.sf-express.com
 # http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js, requires-body=true, timeout=60, tag=顺丰速运获取token
 
 # 奶茶多合一 hostname = webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn
-http-response ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enabled=true, tag=奶茶获取token
-http-request ^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enabled=true, tag=奶茶获取token
+response if ${url} ~= /^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp)/i then script("https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js") with tag="奶茶获取token", timeout=60, requires_body=true
+request if ${url} ~= /^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign)/i then script("https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js") with tag="奶茶获取token", timeout=60, requires_body=true
 
 # IQOO社区 hostname = bbs-api.iqoo.com
-http-response ^https:\/\/bbs-api\.iqoo\.com\/api\/v3\/user\?userId= script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/IQOO/IQOO.js, requires-body=true, tag=IQOO社区_获取token
+response if ${url} ~= /^https:\/\/bbs-api\.iqoo\.com\/api\/v3\/user\?userId=/i then script("https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/IQOO/IQOO.js") with tag="IQOO社区_获取token", requires_body=true
 
 # 三得利 hostname = xiaodian.miyatech.com
-http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/member\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/SDL/SDL.js, requires-body=true, timeout=20, tag=三得利_获取token
+response if ${url} ~= /^https:\/\/xiaodian\.miyatech\.com\/api\/user\/member\/info/i then script("https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/SDL/SDL.js") with tag="三得利_获取token", timeout=20, requires_body=true
 
 # 网易严选 hostname = act.you.163.com
-http-request ^https:\/\/act\.you\.163\.com\/act-attendance\/task\/list script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WYYX/WYYX.js, requires-body=true, timeout=20, tag=网易严选_获取cookie
+request if ${url} ~= /^https:\/\/act\.you\.163\.com\/act-attendance\/task\/list/i then script("https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WYYX/WYYX.js") with tag="网易严选_获取cookie", timeout=20, requires_body=true
 
 # 统一 hostname = xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com
-http-response ^https:\/\/xapi\.weimob\.com\/api3\/onecrm\/user\/center\/usercenter\/queryUserInfo script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TongYi/TongYi.js, requires-body=true, timeout=20, tag=统一_获取token
+response if ${url} ~= /^https:\/\/xapi\.weimob\.com\/api3\/onecrm\/user\/center\/usercenter\/queryUserInfo/i then script("https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/TongYi/TongYi.js") with tag="统一_获取token", timeout=20, requires_body=true
 
 # 顾家家居 hostname = mc.kukahome.com
 # http-request ^https:\/\/mc\.kukahome\.com\/club-server\/member\/automaticLogin script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GJJJ/GJJJ.js, requires-body=true, timeout=20, tag=顾家家居_获取token
@@ -75,43 +76,40 @@ http-response ^https:\/\/xapi\.weimob\.com\/api3\/onecrm\/user\/center\/usercent
 
 # 自用
 # 爷爷不泡茶获取cookie hostname = webapi.qmai.cn
-http-request ^https://webapi.qmai.cn/web/catering/crm/points-info$ script-path=getcookies.js, timeout=60, enabled=true, tag=爷爷不泡茶获取cookie
+request if ${url} ~= /^https:\/\/webapi.qmai.cn\/web\/catering\/crm\/points-info$/i then script("getcookies.js") with tag="爷爷不泡茶获取cookie", timeout=60
 
 # 星妈会 hostname = momclub.feihe.com
-http-request ^https:\/\/momclub.feihe.com\/capis\/c\/user\/memberInfo$ script-path=getcookies.js, timeout=60, enabled=true, tag=星妈会获取cookie
+request if ${url} ~= /^https:\/\/momclub.feihe.com\/capis\/c\/user\/memberInfo$/i then script("getcookies.js") with tag="星妈会获取cookie", timeout=60
 
 # 飞蚂蚁旧衣回收 hostname = openapp.fmy90.com:443
-http-request ^https://openapp.fmy90.com/user/base/info script-path=getcookies.js, timeout=60, enabled=true, tag=飞蚂蚁旧衣回收获取cookie
+request if ${url} ~= /^https:\/\/openapp.fmy90.com\/user\/base\/info/i then script("getcookies.js") with tag="飞蚂蚁旧衣回收获取cookie", timeout=60
 
 # WPS每日签到会员捕获Cookie hostname = moapi.wps.cn
 # http-request ^https:\/\/moapi\.wps\.cn\/app\/ios\/v1\/app$ script-path=wps.js, requires-body=true, enabled=true, tag=WPS捕获Cookie
 
 # 顺丰速运获取Cookie hostname = mcs-mimp-web.sf-express.com
-http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=sfsy.js, requires-body=true, timeout=60, enabled=true, tag=顺丰速运获取token
+response if ${url} ~= /^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+/i then script("sfsy.js") with tag="顺丰速运获取token", timeout=60, requires_body=true
 
 # 顾家家居 hostname = mc.kukahome.com
-http-request ^https:\/\/mc.kukahome.com\/club-server\/front\/member\/personalCenter script-path=getcookies.js, requires-body=false, timeout=60, enabled=true, tag=顾家家居获取token
+request if ${url} ~= /^https:\/\/mc.kukahome.com\/club-server\/front\/member\/personalCenter/i then script("getcookies.js") with tag="顾家家居获取token", timeout=60
 
 # 叮叮充电 hostname = api.dingdingzn.com
-http-response ^https:\/\/api.dingdingzn.com\/uapp\/user\/info script-path=DingDing.js, requires-body=true, tag=叮叮充电_获取token
+response if ${url} ~= /^https:\/\/api.dingdingzn.com\/uapp\/user\/info/i then script("DingDing.js") with tag="叮叮充电_获取token", requires_body=true
 
 # 水易费 hostname = memberapi.ai.ipaiyun.cn
-http-response ^https:\/\/memberapi.ai.ipaiyun.cn\/MemberApp\/GetShopTaskList script-path=ShuiYiFei.js, requires-body=true, tag=水易费_获取token
+response if ${url} ~= /^https:\/\/memberapi.ai.ipaiyun.cn\/MemberApp\/GetShopTaskList/i then script("ShuiYiFei.js") with tag="水易费_获取token", requires_body=true
 
 
 # 叮咚买菜 hostname = maicai.api.ddxq.mobi
-http-request ^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DingDong/DingDong.js, tag=叮咚买菜_获取cookie
+request if ${url} ~= /^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version/i then script("https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DingDong/DingDong.js") with tag="叮咚买菜_获取cookie"
 
 # 京东比价 hostname = apapia-sqk-weblogic.manmanbuy.com 打开慢慢买APP-我的页面（无需登录）获取cookie,会通知获取ck成功
-http-request ^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$ script-path=https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js,requires-body=true, timeout=60, tag=京东比价获取token, enable=true
+request if ${url} ~= /^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$/i then script("https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js") with tag="京东比价获取token", timeout=60, requires_body=true
 
 # WPS每日签到会员捕获Cookie hostname = personal-act.wps.cn
-http-request ^https:\/\/personal-act\.wps\.cn\/activity-rubik\/activity\/page_info tag=新WPS Cookie, script-path=https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/wps/wps.cookie.js, requires-body=false, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/wps.png
-
-# 小米商城抽奖脚本 hostname = shop-api.retail.mi.com
-http-request ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/venue\/batch tag=小米抽奖 Cookie, script-path=https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/milottery/milottery.js, requires-body=true, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/mishop.png
+request if ${url} ~= /^https:\/\/personal-act\.wps\.cn\/activity-rubik\/activity\/page_info/i then script("https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/wps/wps.cookie.js") with tag="新WPS Cookie", img_url="https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/wps.png"
 
 
 [MITM]
-hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, m.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, i.meituan.com, mxsa.mxbc.net, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, bbs-api.iqoo.com, xiaodian.miyatech.com, act.you.163.com, ys.shajixueyuan.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, mc.kukahome.com, momclub.feihe.com, openapp.fmy90.com, mcs-mimp-web.sf-express.com, api.dingdingzn.com, memberapi.ai.ipaiyun.cn, mc.kukahome.com, maicai.api.ddxq.mobi, apapia-sqk-weblogic.manmanbuy.com, personal-act.wps.cn, shop-api.retail.mi.com
+hostname = *.amap.com, yunbusiness.ccb.com, mall.meituan.com, sweixin.hisense.com, auth.aliyundrive.com, youhui.95516.com, app.bilibili.com, h5.youzan.com, api.m.jd.com, api.hellobike.com, i.meituan.com, mxsa.mxbc.net, tm-web.pin-dao.cn, popvip.paquapp.com, webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn, bbs-api.iqoo.com, xiaodian.miyatech.com, act.you.163.com, ys.shajixueyuan.com, xapi.weimob.com, qiehuang-apig.xiaoyisz.com, plugin.szzbmy.com, mc.kukahome.com, momclub.feihe.com, openapp.fmy90.com, mcs-mimp-web.sf-express.com, api.dingdingzn.com, memberapi.ai.ipaiyun.cn, mc.kukahome.com, maicai.api.ddxq.mobi, apapia-sqk-weblogic.manmanbuy.com, personal-act.wps.cn
 
