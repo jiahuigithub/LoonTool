@@ -362,6 +362,9 @@ response if ${url} ~= /^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/picassovc
 # 叮叮充电 hostname = api.dingdingzn.com
 ^https:\/\/api.dingdingzn.com\/uapp\/promotion\/ad\/list mock-response-body data-type=json status-code=200
 
+# 动卡空间 hostname = ump.szcdn.creditcard.ecitic.com
+response if ${url} ~= /^https?://ump.szcdn.creditcard.ecitic.com/ump/img/.+/i then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/Scripts/JS/dongkakongjian.js") with tag="动卡空间开屏广告", requires_body=true, binary_body_mode=true
+
 # ======= E ======= #
 
 # ======= F ======= #
@@ -614,4 +617,4 @@ http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/get
 
 
 [Mitm]
-hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, wallet.95516.com, image1.ccb.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, download1.bankcomm.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, static.psbc.com, mcc.psbc.com, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, in.m.jd.com, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com,
+hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, wallet.95516.com, image1.ccb.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, download1.bankcomm.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, static.psbc.com, mcc.psbc.com, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, in.m.jd.com, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com, ump.szcdn.creditcard.ecitic.com
