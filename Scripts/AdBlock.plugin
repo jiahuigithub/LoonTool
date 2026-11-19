@@ -101,8 +101,6 @@ DOMAIN, tracklog.58.com, REJECT
 DOMAIN-KEYWORD, adv.ccb.com, REJECT
 
 
-# > 京东
-URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
 
@@ -415,17 +413,6 @@ response if ${url} ~= /^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/picassovc
 ^https?:\/\/download1\.bankcomm\.com\/mobs6-inner\/offline\/static\/releaseConf reject
 
 
-# > 京东
-# hostname = api.m.jd.com
-^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
-^http:\/\/\w{32}\.jddebug\.com\/diagnose\? reject
-^https:\/\/api\.m\.jd\.com\/\?loginType=11 reject-dict
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 reject
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) reject-dict
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising response-body-replace-regex jdLiteAdvertisingVO sooyaaabo
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig response-body-json-replace data.JDMessage.socketmonitor.isSocketEstablishedAhead 0 data.JDMessage.socketmonitor.isSocketReport 0 data.JDHttpToolKit.httpdns.httpdns 0
-
-
 
 # ======= K ======= #
 
@@ -598,13 +585,6 @@ response if ${url} ~= /^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/picassovc
 # 动卡空间 hostname = ump.szcdn.creditcard.ecitic.com
 response if ${url} ~= /^https?:\/\/ump.szcdn.creditcard.ecitic.com\/ump\/img\/.+/i then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/dongkakongjian.js") with tag="动卡空间开屏广告", requires_body=true, binary_body_mode=true
 
-# > 京东
-# hostname = api.m.jd.com
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js, requires-body = true, tag = [京东]移除广告
-
-# > 京东极速版
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://loon.103516.xyz/Script/CommonScript/replace-body.js, argument = jdLiteAdvertisingVO -> sooyaaabo, requires-body = true, tag = [京东]移除京东极速版广告
-
 # > 盒马
 http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(?>indexpage|mypage|tabfeedstream) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/freshippo.js, requires-body=true, timeout=60, tag=盒马, enable=true
 
@@ -619,4 +599,4 @@ http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/get
 
 
 [Mitm]
-hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, wallet.95516.com, image1.ccb.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, download1.bankcomm.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, static.psbc.com, mcc.psbc.com, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, api.m.jd.com, in.m.jd.com, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com, ump.szcdn.creditcard.ecitic.com
+hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, wallet.95516.com, image1.ccb.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, download1.bankcomm.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, static.psbc.com, mcc.psbc.com, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com, ump.szcdn.creditcard.ecitic.com
