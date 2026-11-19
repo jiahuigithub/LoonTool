@@ -596,7 +596,7 @@ response if ${url} ~= /^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/picassovc
 [Script]
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # 动卡空间 hostname = ump.szcdn.creditcard.ecitic.com
-response if ${url} ~= /^https?://ump.szcdn.creditcard.ecitic.com/ump/img/.+/i then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/Scripts/JS/dongkakongjian.js") with tag="动卡空间开屏广告", requires_body=true, binary_body_mode=true
+response if ${url} ~= /^https?:\/\/ump.szcdn.creditcard.ecitic.com\/ump\/img\/.+/i then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/dongkakongjian.js") with tag="动卡空间开屏广告", requires_body=true, binary_body_mode=true
 
 # > 京东
 # hostname = api.m.jd.com
