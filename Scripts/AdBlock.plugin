@@ -243,10 +243,6 @@ DOMAIN, wxsmsdy.video.qq.com, REJECT
 # >>>>>>>>>>>>>>> ✅ V ✅ <<<<<<<<<<<<<<
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
-# > 微信
-DOMAIN-SUFFIX, wxs.qq.com, REJECT
-DOMAIN, badjs.weixinbridge.com, REJECT
-DOMAIN, dns.weixin.qq.com.cn, REJECT
 
 # >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
 # > 小米
@@ -254,26 +250,28 @@ DOMAIN, data.mistat.xiaomi.com, REJECT
 DOMAIN, tracking.intl.miui.com, REJECT
 
 # > 晓晓优选
+DOMAIN-SUFFIX, adintl.cn, REJECT
+DOMAIN-SUFFIX, zhangyuyidong.cn, REJECT
 DOMAIN-SUFFIX, 1sapp.com, REJECT
 DOMAIN-SUFFIX, aiclk.com, REJECT
 DOMAIN-SUFFIX, adbiding.com, REJECT
 DOMAIN-SUFFIX, xwpbj.com, REJECT
-DOMAIN-SUFFIX, qttunion.com, REJECT
 DOMAIN-SUFFIX, qiyukf.com, REJECT
+DOMAIN-SUFFIX, qttunion.com, REJECT
 DOMAIN-SUFFIX, fancyapi.com, REJECT
 DOMAIN-SUFFIX, ad.richmob.cn, REJECT
 DOMAIN-SUFFIX, api-htp.beizi.biz, REJECT
-DOMAIN-suffix, yfanads.com, REJECT
-DOMAIN-suffix, 1rtb.net, REJECT
-DOMAIN-suffix, adwangmai.com, REJECT
-DOMAIN-suffix, yunxinfw.com, REJECT
-DOMAIN-suffix, bridgeoos.com, REJECT
-DOMAIN-suffix, cloooud.com, REJECT
-DOMAIN-suffix, baihemob.com, REJECT
-DOMAIN-suffix, ad.bwton.com, REJECT
-DOMAIN-suffix, api.wxcjgg.cn, REJECT
-DOMAIN-suffix, shunchangzhixing.com, REJECT
-IP-CIDR, 114.132.165.205/32, REJECT
+DOMAIN-SUFFIX, yfanads.com, REJECT
+DOMAIN-SUFFIX, 1rtb.net, REJECT
+DOMAIN-SUFFIX, adwangmai.com, REJECT
+DOMAIN-SUFFIX, yunxinfw.com, REJECT
+DOMAIN-SUFFIX, bridgeoos.com, REJECT
+DOMAIN-SUFFIX, cloooud.com, REJECT
+DOMAIN-SUFFIX, baihemob.com, REJECT
+DOMAIN-SUFFIX, ad.bwton.com, REJECT
+DOMAIN-SUFFIX, api.wxcjgg.cn, REJECT
+DOMAIN-SUFFIX, shunchangzhixing.com, REJECT
+IP-CIDR, 114.132.165.205/32, REJECT, no-resolve
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # > 云闪付
@@ -379,15 +377,6 @@ request if ${url} ~= /^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tp
 
 
 # ======= H ======= #
-# > 盒马
-# hostname = acs.m.taobao.com, acs-m.freshippo.com
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.hippotown\.tabbar\.info reject
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene reject-dict
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage reject-200
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice reject-dict
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.crm\.platform\.ma\.recommend reject-dict
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.mimir\.recommend\.after\.purchase\.activity reject-dict
-
 # > 花小猪
 # hostname = res.hongyibo.com.cn
 # 开屏
@@ -426,20 +415,6 @@ request if ${url} ~= /^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tp
 # ======= L ======= #
 
 # ======= M ======= #
-# > 芒果tv
-^https?://mobile.da.mgtv.com\/m\/page reject
-
-# > 美团 & 美团外卖
-# hostname = img.meituan.net, s3plus.meituan.net, flowplus.meituan.net
-^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
-^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) reject-dict
-^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
-^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
-^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
-# 美团订单详情页更多推荐
-^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
-
-
 # > 买单吧
 # hostname = creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com
 ^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg) reject
@@ -481,9 +456,6 @@ request if ${url} ~= /^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tp
 # ======= V ======= #
 
 # ======= W ======= #
-# > 移除微信公众号文章底栏都在搜
-^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword reject-dict
-
 
 # ======= X ======= #
 # > 小兔充充
@@ -493,20 +465,10 @@ request if ${url} ~= /^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tp
 
 # > 晓晓优选
 # hostname = xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
-# 多余模块
-# ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra reject-dict
-^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad reject
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad reject
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner reject
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/new_banner\? reject
-# 弹窗广告
-^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
-#^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad reject-dict
-# 右下角的悬浮广告
-^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show reject
-^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/urban\/activity\/index\/data\?agentId=12 reject
-# 禁止上报设备信息
-^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form reject
+request if ${url} ~= /^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad/i then reject(404)
+request if ${url} ~= /^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad/i then reject(404)
+request if ${url} ~= /^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner/i then reject(404)
+request if ${url} ~= /^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/new_banner\?/i then reject(404)
 
 # > 携程
 # hostname = m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com
@@ -540,60 +502,15 @@ request if ${url} ~= /^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tp
 # 首页横幅广告
 ^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
 
-
-# > 中国移动
-# hostname = client.app.coc.10086.cn, app.10086.cn
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit reject-200
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList reject
-# 多个悬浮窗
-^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket reject
-
-# > 中国移动云盘
-# hostname = mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com
-^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/IAdvert reject-200
-^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/v\d\/getAdverts reject-200
-^https?:\/\/middle\.yun\.139\.com\/openapi\/cardConfig\/queryCardInfoV3 reject-200
-^https?:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/adv-filter\/AdInfoFilter\/getAdInfos reject-dict
-^https?:\/\/mrp\.mcloud\.139\.com\/mc\/mc-client-service\/openapi\/letter\/query reject-dict
-
-# > 中国联通
-# hostname = m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
-^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) reject-img
-^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm reject-dict
-^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) reject-img
-^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) reject-img
-^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} reject-img
-^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= reject-img
-
 # > 中国电信
 # hostname = cloud.189.cn, zt-app.go189.cn
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation reject-img
 
-
-# > 菜鸟裹裹
-# hostname = cn-acs.m.cainiao.com, amdc.m.taobao.com
-# 首页 好物推荐,商品推广,底部标签页,快递详情页,问卷调查,主页图标
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|index)\.cn reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbopen\.miniapp\.recommend\.cpc\.cn reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn reject-dict
-# 发现页 数字角标 裹裹券
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cncreditmarket\.hit\.getactivityhit\.cn reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.longquan\.place\.getpageresourcecontent\.cn reject-dict
-# 支付宝-菜鸟
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads reject
-
 [Script]
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # 动卡空间 hostname = ump.szcdn.creditcard.ecitic.com
 response if ${url} ~= /^https?:\/\/ump.szcdn.creditcard.ecitic.com\/ump\/img\/.+/i then script("https://raw.githubusercontent.com/jiahuigithub/LoonTool/main/Scripts/JS/dongkakongjian.js") with tag="动卡空间开屏广告", requires_body=true, binary_body_mode=true
-
-# > 盒马
-http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(?>indexpage|mypage|tabfeedstream) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/freshippo.js, requires-body=true, timeout=60, tag=盒马, enable=true
 
 
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
@@ -606,4 +523,4 @@ http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/get
 
 
 [Mitm]
-hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, gw.alicdn.com, acs-m.freshippo.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, wallet.95516.com, api-ad.kajicam.com, image1.ccb.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, download1.bankcomm.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, static.psbc.com, mcc.psbc.com, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, m.360buyimg.com, api.sogaha.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, api.dingdingzn.com, ump.szcdn.creditcard.ecitic.com
+hostname = gab.122.gov.cn, v.icbc.com.cn, acs.m.taobao.com, gw.alicdn.com, *.cmvideo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, ad.xiaotucc.com, mapi.xiaotucc.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, wallet.95516.com, api-ad.kajicam.com, image1.ccb.com, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, download1.bankcomm.com, res.hongyibo.com.cn, app.peopleapp.com, b2baifanfan.baidu.com, 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, static.psbc.com, mcc.psbc.com, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, cloud.189.cn, zt-app.go189.cn, m.360buyimg.com, api.sogaha.cn, api.dingdingzn.com, ump.szcdn.creditcard.ecitic.com
